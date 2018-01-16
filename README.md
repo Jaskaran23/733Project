@@ -5,7 +5,7 @@ A cryptocurrency big data project
 This project is an experiment in data science practice.
 
 ### Collection
-Data is collected in the [scrapers]() module
+Data is collected in the [scrapers](MachinaEconomicus/Scrapers) module
 
 ### Cleaning
 

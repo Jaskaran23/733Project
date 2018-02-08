@@ -27,6 +27,6 @@ Vizualization is implemented in HTML and JavaScript. The vizualization module ca
 
 
 ### References
-1. [https://arxiv.org/pdf/1706.10059.pdf](Deep Reinforcement Learning for the Financial Portfolio Management Problem)
-2. [http://rsos.royalsocietypublishing.org/content/4/11/170623](Evolutionary Dynamics of the Cryptocurrency Market)
-3. [https://coinmarketcap.com/](coinmarketcap.com)
+1. [Deep Reinforcement Learning for the Financial Portfolio Management Problem](https://arxiv.org/pdf/1706.10059.pdf)
+2. [Evolutionary Dynamics of the Cryptocurrency Market](http://rsos.royalsocietypublishing.org/content/4/11/170623)
+3. [coinmarketcap.com](https://coinmarketcap.com/)

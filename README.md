@@ -1,4 +1,4 @@
-# machina-economicus
+# 733 Project
 Can we visualize the cryptocurrency ecosystem?
 
 ### About
@@ -30,3 +30,5 @@ Vizualization is implemented in HTML and JavaScript. The vizualization module ca
 1. [Deep Reinforcement Learning for the Financial Portfolio Management Problem](https://arxiv.org/pdf/1706.10059.pdf)
 2. [Evolutionary Dynamics of the Cryptocurrency Market](http://rsos.royalsocietypublishing.org/content/4/11/170623)
 3. [coinmarketcap.com](https://coinmarketcap.com/)
+4. [Analyzing Cryptocurrency Markets Using Python](https://blog.patricktriest.com/analyzing-cryptocurrencies-python/)
+5. [Predicting Cryptocurrency Prices with Deep Learning](https://dashee87.github.io/deep%20learning/python/predicting-cryptocurrency-prices-with-deep-learning/)

@@ -2,10 +2,11 @@
 A cryptocurrency big data project
 
 ### About
-This project is an experiment in data science practice.
+This project is an experiment in data science practice. 
 
-### Collection
-Data is collected in the [scrapers](MachinaEconomicus/Scrapers) module
+### Scrapers
+Data is collected and clearned in the [scrapers](https://github.com/LinuxIsCool/MachinaEconomicus/tree/master/MachinaEconomicus/Scrapers) 
+module.
 
 ### Cleaning
 

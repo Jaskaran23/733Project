@@ -1,18 +1,20 @@
 * Coinmarketcap
-*** TODO Turn cmk into class
-*** TODO Implement cmk model
-*** TODO Implement cmk API endpoint
-*** TODO Post cmk object to DB
+  * TODO Turn cmk into class
+  * TODO Implement cmk model
+  * TODO Implement cmk API endpoint
+  * TODO Post cmk object to DB
 * Data Analysis
-*** TODO Begin first EDA notebook
-*** TODO Hack around
+  * TODO Begin first EDA notebook
+  * TODO jointPlot coins price vs. github stars
+  * TODO Plot coins price vs. github stars
+  * TODO Hack around
       1. Download static coin data. Post to database.
       2. Download Time series data. Post to database.
 * Other Scrapers
-*** TODO Implement Twitter class, model, and API
-*** TODO Implement GitHub class, model, and API
+  * TODO Implement Twitter class, model, and API
+  * TODO Implement GitHub class, model, and API
 * Architecture and Organization
-*** DONE Alternative name to MachinaEconomicus (CryptoViz)
+  * DONE Alternative name to MachinaEconomicus (CryptoViz)
     CLOSED: [2018-02-20 Tue 13:58]
-*** DONE Add usage instructions to README
+  * DONE Add usage instructions to README
     CLOSED: [2018-02-20 Tue 13:58]

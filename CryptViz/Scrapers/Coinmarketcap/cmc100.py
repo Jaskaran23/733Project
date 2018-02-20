@@ -1,17 +1,19 @@
 import requests
 from lxml import etree
 import pandas as pd
+import os
 
 root_url = "http://coinmarketcap.com"
+dir = os.path.dirname(__file__)
 
 def cache_coinmarketcap():
     cmc = requests.get(root_url)
     text = cmc.text
-    with open('coinmarketcap.html', 'w+') as f:
+    with open(os.path.join(dir,'coinmarketcap.html'), 'w+') as f:
         f.write(text)
 
 def read_coinmarketcap():
-    with open('coinmarketcap.html') as f:
+    with open(os.path.join(dir,'coinmarketcap.html')) as f:
         text = f.read()
     tree = etree.HTML(text)
 
@@ -25,11 +27,11 @@ def cache_coin(coin, coin_url):
     url = root_url + coin_url
     coin_page = requests.get(url)
     text = coin_page.text
-    with open('{}.html'.format(coin), 'w+') as f:
+    with open(os.path.join(dir,'{}.html'.format(coin)), 'w+') as f:
         f.write(text)
 
 def read_coin(coin):
-    with open('{}.html'.format(coin)) as f:
+    with open(os.path.join(dir,'{}.html'.format(coin))) as f:
         text = f.read()
     tree = etree.HTML(text)
 

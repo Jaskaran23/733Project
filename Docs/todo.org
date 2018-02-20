@@ -1,6 +1,18 @@
-1. Alternative name to MachinaEconomicus (CryptoViz)
-2. Add usage instructions to README
-3. Hack around
-      Download some cool data
-      Post to database
-
+* Coinmarketcap
+*** TODO Turn cmk into class
+*** TODO Implement cmk model
+*** TODO Implement cmk API endpoint
+*** TODO Post cmk object to DB
+* Data Analysis
+*** TODO Begin first EDA notebook
+*** TODO Hack around
+      1. Download static coin data. Post to database.
+      2. Download Time series data. Post to database.
+* Other Scrapers
+*** TODO Implement Twitter class, model, and API
+*** TODO Implement GitHub class, model, and API
+* Architecture and Organization
+*** DONE Alternative name to MachinaEconomicus (CryptoViz)
+    CLOSED: [2018-02-20 Tue 13:58]
+*** DONE Add usage instructions to README
+    CLOSED: [2018-02-20 Tue 13:58]

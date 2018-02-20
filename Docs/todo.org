@@ -1,0 +1,6 @@
+1. Alternative name to MachinaEconomicus (CryptoViz)
+2. Add usage instructions to README
+3. Hack around
+      Download some cool data
+      Post to database
+

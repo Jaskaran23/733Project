@@ -1,4 +1,4 @@
-# 733 Project
+# Big Data II Final Project: CryptViz
 Can we visualize the cryptocurrency ecosystem?
 
 ### About

@@ -17,36 +17,36 @@ Discussion can be found on the [slack channel](https://sfu-big-data.slack.com/me
 
 ### Usage
 #### Installation
-    git clone https://github.com/LinuxIsCool/733Project.git
-    cd 733Project
-    activate virtual environment
-    pip install -r requirements.txt
+	git clone https://github.com/LinuxIsCool/733Project.git
+	cd 733Project
+	activate virtual environment
+	pip install -r requirements.txt
 
 #### Running the server
-    cd CryptViz/
-    python manage.py runserver
+	cd CryptViz/
+	python manage.py runserver
      
 #### CoinMarketCap Scraper
 Get list of top 100 coins(ranked by market cap) from coinmarketcap.com
 
-    from CryptViz.Scrapers.Coinmarketcap import coinmarketcap
-    cmk = coinmarketcap()
-    top_100 = cmk.coin_list
+	from CryptViz.Scrapers.Coinmarketcap import coinmarketcap
+	cmk = coinmarketcap()
+	top_100 = cmk.coin_list
 
 #### Posting to Database
 Posting static data for top 100 coins. (Website URL, Git URL, Forum URL)
 
-    for coin in top_100:
-    	static_data = cmk.get_static(coin)
-	url = "api/" + coin
-	requests.post(url, coin_data)
+	for coin in top_100:
+		static_data = cmk.get_static(coin)
+		url = "api/" + coin
+		requests.post(url, coin_data)
 
 Posting time series data for top 100 coins. One period is one day. (Price, Volume)
 
-    for coin in top_100:
-    	daily_data = cmk.get_today(coin)
-	url = "api/" + coin + "/cmk/" + datetime.datetime.today().strftime("%D")
-	requests.post(url, daily_data)
+	for coin in top_100:
+		daily_data = cmk.get_today(coin)
+		url = "api/" + coin + "/cmk/" + datetime.datetime.today().strftime("%D")
+		requests.post(url, daily_data)
     
 ### References
 1. [Deep Reinforcement Learning for the Financial Portfolio Management Problem](https://arxiv.org/pdf/1706.10059.pdf) [implementation](https://github.com/ZhengyaoJiang/PGPortfolio) [replication](https://github.com/wassname/rl-portfolio-management)

@@ -1,9 +1,20 @@
-# CryptoViz
+* CryptoViz
 Shawn Anderson, Ka Hang Jacky Lok, Vimohitha 
 
 ** About
-   This project is an experiment in data science practice. 
+   CryptoViz is a platform for visualizing the cryptocurrency ecosystem.
 ** Usage
+**** Installation
+     1. git clone https://github.com/LinuxIsCool/733Project.git
+     2. cd 733Project
+     3. activate virtual environment
+     4. pip install -r requirements.txt
+
+**** Running the server
+     1. cd CryptViz/
+     2. python manage.py runserver
+     
+**** Running the server
 ** Components
 *** Scrapers
     Data is collected and clearned in the [scrapers](https://github.com/LinuxIsCool/733Project/tree/master/733Project/Scrapers) 
@@ -16,7 +27,6 @@ Shawn Anderson, Ka Hang Jacky Lok, Vimohitha
 *** Analysis
 
 *** Visualization
-
 
 ** Proposal
 *** List 3 questions that you intend to answer (1 point)
@@ -93,12 +103,12 @@ a coin name.
     fast queries on 500GB of data, how do we do it?
 
 ** References.
-1. [Deep Reinforcement Learning for the Financial Portfolio Management
-   Problem](https://arxiv.org/pdf/1706.10059.pdf)
-   [implementation](https://github.com/ZhengyaoJiang/PGPortfolio)
-   [replication](https://github.com/wassname/rl-portfolio-management)
-2. [Evolutionary Dynamics of the Cryptocurrency Market](http://rsos.royalsocietypublishing.org/content/4/11/170623)
-3. [coinmarketcap.com](https://coinmarketcap.com/)
-4. [Analyzing Cryptocurrency Markets Using Python](https://blog.patricktriest.com/analyzing-cryptocurrencies-python/)
-5. [Predicting Cryptocurrency Prices with Deep Learning](https://dashee87.github.io/deep%20learning/python/predicting-cryptocurrency-prices-with-deep-learning/)
+1. [[https://arxiv.org/pdf/1706.10059.pdf][Deep Reinforcement Learning for the Financial Portfolio Management
+   Problem]]
+   [[https://github.com/ZhengyaoJiang/PGPortfolio][implementation]]
+   [[https://github.com/wassname/rl-portfolio-management][replication]]
+3. [[http://rsos.royalsocietypublishing.org/content/4/11/170623][Evolutionary Dynamics of the Cryptocurrency Market]]
+4. [[https://coinmarketcap.com/][coinmarketcap.com]]
+5. [[https://blog.patricktriest.com/analyzing-cryptocurrencies-python/][Analyzing Cryptocurrency Markets Using Python]]
+6. [[https://dashee87.github.io/deep%20learning/python/predicting-cryptocurrency-prices-with-deep-learning/][Predicting Cryptocurrency Prices with Deep Learning]]
 

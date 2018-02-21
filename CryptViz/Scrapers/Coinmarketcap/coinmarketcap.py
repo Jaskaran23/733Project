@@ -3,48 +3,103 @@ from lxml import etree
 import pandas as pd
 import os
 
-root_url = "http://coinmarketcap.com"
-dir = os.path.dirname(__file__)
+class CoinMarketcap():
 
-def cache_coinmarketcap():
-    cmc = requests.get(root_url)
-    text = cmc.text
-    with open(os.path.join(dir,'coinmarketcap.html'), 'w+') as f:
-        f.write(text)
+    def __init__(self):
+        self.root_url = "http://coinmarketcap.com"
+        self.dir = os.path.dirname(__file__)
+        self.tree = self.read()
 
-def read_coinmarketcap():
-    with open(os.path.join(dir,'coinmarketcap.html')) as f:
-        text = f.read()
-    tree = etree.HTML(text)
+    def get(self):
+        cmc = requests.get(self.root_url)
+        text = cmc.text
+        with open(os.path.join(self.dir,'coinmarketcap.html'), 'w+') as f:
+            f.write(text)
+        return text
 
-    coins = tree.findall(".//a[@class='currency-name-container']") 
-    coin_names = [e.text for e in coins]
-    print(coins)
-    coin_urls = [e.attrib['href'] for e in coins]
-    print(coin_urls)
+    def read(self):
+        try:
+            with open(os.path.join(self.dir,'coinmarketcap.html')) as f:
+                text = f.read()
+        except FileNotFoundError:
+            text = self.get()
+        tree = etree.HTML(text)
+        return tree
 
-def cache_coin(coin, coin_url):
-    url = root_url + coin_url
-    coin_page = requests.get(url)
-    text = coin_page.text
-    with open(os.path.join(dir,'{}.html'.format(coin)), 'w+') as f:
-        f.write(text)
+    def coin_names(self):
+        """ 
+        Returns a list the 100 coins from the front page of coinmarketcap.com
+        """
+        coins = self.tree.findall(".//a[@class='currency-name-container']") 
+        coin_names = [e.text for e in coins]
+        return coin_names
 
-def read_coin(coin):
-    with open(os.path.join(dir,'{}.html'.format(coin))) as f:
-        text = f.read()
-    tree = etree.HTML(text)
+    def coin_urls(self):
+        """ 
+        Returns a list of 100 URLs. The ith URL is a the relative path for the 
+        coinmarketcap page corresponding to the ith coin from coinmarketcap. 
+        """
+        coins = self.tree.findall(".//a[@class='currency-name-container']") 
+        coin_urls = [e.attrib['href'] for e in coins]
+        return coin_urls
 
-    token_symbol = tree.find(".//small[@class='bold hidden-xs']") 
-    # Strip Parenthesis
-    token_symbol = token_symbol.text[1:-1]
+    def coins(self):
+        "Returns a list of dicts representing coins."
+        cn = self.coin_names()
+        cu = self.coin_urls()
+        coins = [{'name':x[0],'relative_url':x[1]} for x in zip(cn,cu)]
+        return coins
 
-def get_coin_history(coin_url):
-    url = root_url + coin_url + "/historical-data"
-    df = pd.read_html(url)[0]
+    def coin(self, coin):
+        """
+        Takes a dict representing a coin. Returns a coin object representing that
+        coin's page on coinmarketcap.com.
+        """
+        return Coin(coin['name'], coin['relative_url'])
 
+class Coin():
+    def __init__(self, name, relative_url):
+        self.url = "http://coinmarketcap.com" + relative_url
+        self.dir = os.path.dirname(__file__)
+        self.name = name
+        self.tree = self.read()
 
-def coin_name_to_url(coin):
-    coin = coin.lower().replace(" ", "-")
-    return coin
+    def get(self):
+        """
+        Get's the page http://coinmarketcap.com/currencies/coin
+        """
+        page = requests.get(self.url)
+        text = page.text
+        with open(os.path.join(self.dir,'{}.html'.format(self.name)), 'w+') as f:
+            f.write(text)
+        return text
+
+    def read(self):
+        try:
+            with open(os.path.join(self.dir,'{}.html'.format(self.name))) as f:
+                text = f.read()
+        except FileNotFoundError:
+            text = self.get()
+        tree = etree.HTML(text)
+        return tree
+
+    def symbol(self):
+        symbol = self.tree.find(".//small[@class='bold hidden-xs']") 
+        # Strip Parenthesis
+        symbol = symbol.text[1:-1]
+        return symbol
+
+    def website(self):
+        links = self.tree.findall(".//a")
+        website = [l.attrib['href'] for l in links if l.text == "Website"][0]
+        return website
+
+    def github(self):
+        links = self.tree.findall(".//a")
+        github = [l.attrib['href'] for l in links if l.text == "Source Code"][0]
+
+    def history(self):
+        url = self.url + "/historical-data"
+        df = pd.read_html(url)[0]
+        return df
 

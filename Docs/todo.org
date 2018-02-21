@@ -1,8 +1,8 @@
 * Coinmarketcap
-  * TODO Turn cmk into class
-  * TODO Implement cmk model
-  * TODO Implement cmk API endpoint
-  * TODO Post cmk object to DB
+  * DONE Turn coinmarketcap into class
+  * TODO Implement coinmarketcap model
+  * TODO Implement coinmarketcap API endpoint
+  * TODO Post coinmarketcap object to DB
 * Data Analysis
   * TODO Begin first EDA notebook
   * TODO jointPlot coins price vs. github stars

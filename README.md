@@ -29,9 +29,9 @@ Discussion can be found on the [slack channel](https://sfu-big-data.slack.com/me
 #### CoinMarketCap Scraper
 Get list of top 100 coins(ranked by market cap) from coinmarketcap.com
 
-	from CryptViz.Scrapers.Coinmarketcap import coinmarketcap
-	cmk = coinmarketcap()
-	top_100 = cmk.coin_list
+	from Scrapers.Coinmarketcap import coinmarketcap
+	cmk = coinmarketcap.CoinMarketcap()
+	coins = cmk.coin_names()
 
 #### Posting to Database
 Posting static data for top 100 coins. (Website URL, Git URL, Forum URL)

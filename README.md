@@ -17,14 +17,36 @@ Discussion can be found on the [slack channel](https://sfu-big-data.slack.com/me
 
 ### Usage
 #### Installation
+Download
+
 	git clone https://github.com/LinuxIsCool/733Project.git
 	cd 733Project
-	activate virtual environment
+
+Create or Activate virtual environment
+
+	# With Conda
+	conda new 733Project
+	conda activate 733Project
+
+	# Or with virtualenv
+	virtualenv venv
+	source venv/bin/activate
+
+Install Requirements
+
 	pip install -r requirements.txt
+
+Install kernal to use in jupyter notebooks
+
+	ipython kernel install --user --name=733Project
+
 
 #### Running the server
 	cd CryptViz/
 	python manage.py runserver
+
+#### Launching the Notebooks
+	jupyter-notebook CoinMarketcap.ipynb
      
 #### CoinMarketCap Scraper
 Get list of top 100 coins(ranked by market cap) from coinmarketcap.com

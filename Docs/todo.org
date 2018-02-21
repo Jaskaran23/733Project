@@ -5,6 +5,7 @@
   * TODO Post coinmarketcap object to DB
 * Data Analysis
   * TODO Begin first EDA notebook
+  * TODO PieChart Coinmarketcaps
   * TODO jointPlot coins price vs. github stars
   * TODO Plot coins price vs. github stars
   * TODO Hack around

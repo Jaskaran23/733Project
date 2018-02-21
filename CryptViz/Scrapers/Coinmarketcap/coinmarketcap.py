@@ -7,7 +7,7 @@ class CoinMarketcap():
 
     def __init__(self):
         self.root_url = "http://coinmarketcap.com"
-        self.dir = os.path.dirname(__file__)
+        self.dir = os.path.dirname(__file__) + "/data/"
         self.tree = self.read()
 
     def get(self):
@@ -57,12 +57,34 @@ class CoinMarketcap():
         """
         return Coin(coin['name'], coin['relative_url'])
 
+    def all_coin_data(self, return_json=False):
+        """
+        Generate a list of coin objects, containing all fields as specified in
+        the Coin class.
+        """
+        all_coin_data = []
+        coins = self.coins()
+        for coin in coins:
+            coin = self.coin(coin)
+            coin_data = coin.all_fields()
+            all_coin_data.append(coin_data)
+        if return_json:
+            return all_coin_data
+        else:
+            return pd.DataFrame(all_coin_data)
+
+
+
+
 class Coin():
     def __init__(self, name, relative_url):
         self.url = "http://coinmarketcap.com" + relative_url
-        self.dir = os.path.dirname(__file__)
+        self.dir = os.path.dirname(__file__) + "/data/"
         self.name = name
         self.tree = self.read()
+
+    def __str__(self):
+        return self.name
 
     def get(self):
         """
@@ -83,6 +105,17 @@ class Coin():
         tree = etree.HTML(text)
         return tree
 
+    def all_fields(self):
+        coin_data = {
+                'name': self.name,
+                'url': self.url,
+                'symbol': self.symbol(),
+                'price': self.price(),
+                'volume': self.volume(),
+                'marketcap': self.marketcap(),
+                }
+        return coin_data
+
     def symbol(self):
         symbol = self.tree.find(".//small[@class='bold hidden-xs']") 
         # Strip Parenthesis
@@ -98,8 +131,33 @@ class Coin():
         links = self.tree.findall(".//a")
         github = [l.attrib['href'] for l in links if l.text == "Source Code"][0]
 
-    def history(self):
+    def today(self):
+        history = self.read_history()
+        today = history.head(1)
+        return today
+
+    def price(self):
+        today = self.today()
+        return today['Open'][0]
+
+    def volume(self):
+        today = self.today()
+        return today['Volume'][0]
+
+    def marketcap(self):
+        today = self.today()
+        return today['Market Cap'][0]
+
+    def read_history(self):
+        try:
+            df = pd.read_csv(os.path.join(self.dir,'{}-history.csv'.format(self.name)))
+        except FileNotFoundError:
+            df = self.get_history()
+        return df
+
+    def get_history(self):
         url = self.url + "/historical-data"
         df = pd.read_html(url)[0]
+        df.to_csv(os.path.join(self.dir,'{}-history.csv'.format(self.name)))
         return df
 

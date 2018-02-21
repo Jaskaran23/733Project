@@ -13,13 +13,13 @@ class CoinMarketcap():
     def get(self):
         cmc = requests.get(self.root_url)
         text = cmc.text
-        with open(os.path.join(self.dir,'coinmarketcap.html'), 'w+') as f:
+        with open(os.path.join(self.dir,'coinmarketcap.html'), 'w+',encoding="utf8") as f:
             f.write(text)
         return text
 
     def read(self):
         try:
-            with open(os.path.join(self.dir,'coinmarketcap.html')) as f:
+            with open(os.path.join(self.dir,'coinmarketcap.html'),encoding="utf8") as f:
                 text = f.read()
         except FileNotFoundError:
             text = self.get()
@@ -92,13 +92,13 @@ class Coin():
         """
         page = requests.get(self.url)
         text = page.text
-        with open(os.path.join(self.dir,'{}.html'.format(self.name)), 'w+') as f:
+        with open(os.path.join(self.dir,'{}.html'.format(self.name)), 'w+',encoding="utf8") as f:
             f.write(text)
         return text
 
     def read(self):
         try:
-            with open(os.path.join(self.dir,'{}.html'.format(self.name))) as f:
+            with open(os.path.join(self.dir,'{}.html'.format(self.name)),encoding="utf8") as f:
                 text = f.read()
         except FileNotFoundError:
             text = self.get()

@@ -11,6 +11,9 @@ class CoinMarketcap():
         self.tree = self.read()
 
     def get(self):
+        """
+        Requests coinmarketcap.com and saves results to disk.
+        """
         cmc = requests.get(self.root_url)
         text = cmc.text
         with open(os.path.join(self.dir,'coinmarketcap.html'), 'w+',encoding="utf8") as f:
@@ -18,6 +21,10 @@ class CoinMarketcap():
         return text
 
     def read(self):
+        """
+        Returns an lxml etree of coinmarketcap.html.
+        Uses cached version if exists, otherwise calls get().
+        """
         try:
             with open(os.path.join(self.dir,'coinmarketcap.html'),encoding="utf8") as f:
                 text = f.read()
@@ -44,20 +51,12 @@ class CoinMarketcap():
         return coin_urls
 
     def coins(self):
-        "Returns a list of dicts representing coins."
-        cn = self.coin_names()
-        cu = self.coin_urls()
-        coins = [{'name':x[0],'relative_url':x[1]} for x in zip(cn,cu)]
+        "Returns a list of Coin objects."
+        coins = zip(self.coin_names(), self.coin_urls())
+        coins = [Coin(name, url) for (name, url) in coins]
         return coins
 
-    def coin(self, coin):
-        """
-        Takes a dict representing a coin. Returns a coin object representing that
-        coin's page on coinmarketcap.com.
-        """
-        return Coin(coin['name'], coin['relative_url'])
-
-    def all_coin_data(self, return_json=False):
+    def all_coin_data(self, ret_df=True, ret_json=False, github=False):
         """
         Generate a list of coin objects, containing all fields as specified in
         the Coin class.
@@ -68,27 +67,27 @@ class CoinMarketcap():
             coin = self.coin(coin)
             coin_data = coin.all_fields()
             all_coin_data.append(coin_data)
-        if return_json:
+        if ret_json:
             return all_coin_data
-        else:
+        if ret_df:
             return pd.DataFrame(all_coin_data)
 
-
-
-
-class Coin():
-    def __init__(self, name, relative_url):
-        self.url = "http://coinmarketcap.com" + relative_url
-        self.dir = os.path.dirname(__file__) + "/data/"
+class Scraper():
+    def __init__(self, name, url):
         self.name = name
+        self.url = url
+        self.dir = os.path.dirname(__file__) + "/data/"
         self.tree = self.read()
 
     def __str__(self):
-        return self.name
+        return self.name()
+
+    def __repr__(self):
+        return str(self.json())
 
     def get(self):
         """
-        Get's the page http://coinmarketcap.com/currencies/coin
+        Get's the page http://github.com/relative_url
         """
         page = requests.get(self.url)
         text = page.text
@@ -105,7 +104,41 @@ class Coin():
         tree = etree.HTML(text)
         return tree
 
-    def all_fields(self):
+    def json(self):
+        return """Overwride this function!"""
+
+
+class GitHub(Scraper):
+    def __init__(self, name, url, coin):
+        super().__init__(name, url)
+        self.coin = coin
+
+    def json(self):
+        github_data = {
+                'name': self.name,
+                'url': self.url,
+                'stars': self.stars(),
+                }
+        return github_data
+
+    def stars(self):
+        stars = self.tree.find(".//small[@class='bold hidden-xs']") 
+
+
+
+
+class Coin(Scraper):
+    def __init__(self, name, relative_url):
+        url = "http://coinmarketcap.com" + relative_url
+        super().__init__(name, url)
+
+    def __str__(self):
+        return self.name()
+
+    def __repr__(self):
+        return str(self.json())
+
+    def json(self):
         coin_data = {
                 'name': self.name,
                 'url': self.url,
@@ -113,6 +146,8 @@ class Coin():
                 'price': self.price(),
                 'volume': self.volume(),
                 'marketcap': self.marketcap(),
+                'timestamp': None,
+                'github_url': self.github_url(),
                 }
         return coin_data
 
@@ -127,9 +162,18 @@ class Coin():
         website = [l.attrib['href'] for l in links if l.text == "Website"][0]
         return website
 
-    def github(self):
+    def github_url(self):
         links = self.tree.findall(".//a")
-        github = [l.attrib['href'] for l in links if l.text == "Source Code"][0]
+        github_url = [l.attrib['href'] for l in links if l.text == "Source Code"][0]
+        return github_url
+
+    def forum_url(self):
+        links = self.tree.findall(".//a")
+        github_url = [l.attrib['href'] for l in links if l.text == "Source Code"][0]
+        return github_url
+
+    def github(self):
+        return GitHub(name=self.name + "-github", url=self.github_url(), coin=self.name)
 
     def today(self):
         history = self.read_history()

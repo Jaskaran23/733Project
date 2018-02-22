@@ -2,6 +2,7 @@ import requests
 from lxml import etree
 import pandas as pd
 import os
+import urllib.parse
 
 class CoinMarketcap():
 
@@ -80,7 +81,7 @@ class Scraper():
         self.tree = self.read()
 
     def __str__(self):
-        return self.name()
+        return self.name
 
     def __repr__(self):
         return str(self.json())
@@ -117,15 +118,49 @@ class GitHub(Scraper):
         github_data = {
                 'name': self.name,
                 'url': self.url,
-                'stars': self.stars(),
                 }
         return github_data
 
+    def pinned_repos(self):
+        pinned_repos = self.tree.findall(".//div[@class='pinned-repo-item-content']") 
+        repos = []
+        for e in pinned_repos:
+                name = e.find(".//span[@class='repo js-repo']").text
+                url = urllib.parse.urljoin(self.url, e          \
+                        .find(".//span[@class='repo js-repo']") \
+                        .getparent()    \
+                        .attrib['href'])
+                description = e.find(".//p").text
+                repo = Repo(name+"-repo", url, description)
+                repos.append(repo)
+        return repos
+
+
+class Repo(Scraper):
+    def __init__(self, name, url, description):
+        super().__init__(name, url)
+        self.description = description
+
+    def json(self):
+        repo_data = {
+                'name': self.name,
+                'url': self.url,
+                'description': self.description,
+                'language': self.language(),
+                'stars': self.stars(),
+                'forks': self.forks(),
+                }
+        return repo_data
+
+    def language(self):
+        return 
+
     def stars(self):
-        stars = self.tree.find(".//small[@class='bold hidden-xs']") 
+        stars = self.tree.find(".//a[@class='social-count js-social-count']") 
+        return
 
-
-
+    def forks(self):
+        return
 
 class Coin(Scraper):
     def __init__(self, name, relative_url):

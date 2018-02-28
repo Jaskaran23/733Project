@@ -105,6 +105,7 @@ class Scraper():
             print(FileNotFoundError)
             text = self.get()
         tree = etree.HTML(text)
+        self.tree = tree
         return tree
 
     def json(self):
@@ -151,18 +152,31 @@ class Repo(Scraper):
                 'language': self.language(),
                 'stars': self.stars(),
                 'forks': self.forks(),
+                'watch': self.watch(),
                 }
         return repo_data
 
     def language(self):
-        return 
+        langs = self.tree.findall(".//span[@class='lang']")
+        langs = [l.text for l in langs]
+        return langs[0]
 
     def stars(self):
         stars = self.tree.find(".//a[@class='social-count js-social-count']") 
-        return
+        stars = stars.text.strip()
+        return int(stars.replace(',',''))
 
     def forks(self):
-        return
+        links = self.tree.findall(".//a") 
+        forks = [a for a in links if a.attrib['href'].endswith('network')][0]
+        forks = forks.text.strip()
+        return int(forks.replace(',',''))
+
+    def watch(self):
+        links = self.tree.findall(".//a") 
+        watch = [a for a in links if a.attrib['href'].endswith('watchers')][0]
+        watch = watch.text.strip()
+        return int(watch.replace(',',''))
 
 class Coin(Scraper):
     def __init__(self, name, relative_url):
@@ -184,7 +198,7 @@ class Coin(Scraper):
                 'volume': self.volume(),
                 'marketcap': self.marketcap(),
                 'timestamp': None,
-                #  'github_url': self.github_url(),
+                'github_url': self.github_url(),
                 }
         return coin_data
 
@@ -200,10 +214,11 @@ class Coin(Scraper):
         return website
 
     def github_url(self):
-        print(self.name)
-        print(self.tree)
         links = self.tree.findall(".//a")
-        #  github_url = [l.attrib['href'] for l in links if l.text == "Source Code"][0]
+        try:
+            github_url = [l.attrib['href'] for l in links if l.text == "Source Code"][0]
+        except IndexError:
+            github_url = None
         return github_url
 
     def forum_url(self):
@@ -229,7 +244,7 @@ class Coin(Scraper):
 
     def marketcap(self):
         today = self.today()
-        return today['Market Cap'][0]
+        return int(today['Market Cap'][0])
 
     def read_history(self):
         try:

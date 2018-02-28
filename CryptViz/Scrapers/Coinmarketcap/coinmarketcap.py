@@ -30,6 +30,7 @@ class CoinMarketcap():
             with open(os.path.join(self.dir,'coinmarketcap.html'),encoding="utf8") as f:
                 text = f.read()
         except FileNotFoundError:
+            print(FileNotFoundError)
             text = self.get()
         tree = etree.HTML(text)
         return tree
@@ -101,6 +102,7 @@ class Scraper():
             with open(os.path.join(self.dir,'{}.html'.format(self.name)),encoding="utf8") as f:
                 text = f.read()
         except FileNotFoundError:
+            print(FileNotFoundError)
             text = self.get()
         tree = etree.HTML(text)
         return tree
@@ -168,7 +170,7 @@ class Coin(Scraper):
         super().__init__(name, url)
 
     def __str__(self):
-        return self.name()
+        return self.name
 
     def __repr__(self):
         return str(self.json())
@@ -182,7 +184,7 @@ class Coin(Scraper):
                 'volume': self.volume(),
                 'marketcap': self.marketcap(),
                 'timestamp': None,
-                'github_url': self.github_url(),
+                #  'github_url': self.github_url(),
                 }
         return coin_data
 
@@ -198,8 +200,10 @@ class Coin(Scraper):
         return website
 
     def github_url(self):
+        print(self.name)
+        print(self.tree)
         links = self.tree.findall(".//a")
-        github_url = [l.attrib['href'] for l in links if l.text == "Source Code"][0]
+        #  github_url = [l.attrib['href'] for l in links if l.text == "Source Code"][0]
         return github_url
 
     def forum_url(self):
@@ -231,6 +235,7 @@ class Coin(Scraper):
         try:
             df = pd.read_csv(os.path.join(self.dir,'{}-history.csv'.format(self.name)))
         except FileNotFoundError:
+            print(FileNotFoundError)
             df = self.get_history()
         return df
 

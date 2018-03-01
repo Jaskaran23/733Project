@@ -15,6 +15,7 @@ class CoinMarketcap():
         """
         Requests coinmarketcap.com and saves results to disk.
         """
+        print("Downloading data for {}".format(self.name))
         cmc = requests.get(self.root_url)
         text = cmc.text
         with open(os.path.join(self.dir,'coinmarketcap.html'), 'w+',encoding="utf8") as f:
@@ -30,7 +31,6 @@ class CoinMarketcap():
             with open(os.path.join(self.dir,'coinmarketcap.html'),encoding="utf8") as f:
                 text = f.read()
         except FileNotFoundError:
-            print(FileNotFoundError)
             text = self.get()
         tree = etree.HTML(text)
         return tree
@@ -91,6 +91,9 @@ class Scraper():
         """
         Get's the page http://github.com/relative_url
         """
+        if self.url == None:
+            return None
+        print("Downloading data for {}".format(self.name))
         page = requests.get(self.url)
         text = page.text
         with open(os.path.join(self.dir,'{}.html'.format(self.name)), 'w+',encoding="utf8") as f:
@@ -102,8 +105,9 @@ class Scraper():
             with open(os.path.join(self.dir,'{}.html'.format(self.name)),encoding="utf8") as f:
                 text = f.read()
         except FileNotFoundError:
-            print(FileNotFoundError)
             text = self.get()
+        if text == None:
+            return None
         tree = etree.HTML(text)
         self.tree = tree
         return tree
@@ -121,10 +125,13 @@ class GitHub(Scraper):
         github_data = {
                 'name': self.name,
                 'url': self.url,
+                'coin': self.coin,
                 }
         return github_data
 
     def pinned_repos(self):
+        if self.tree == None:
+            return None
         pinned_repos = self.tree.findall(".//div[@class='pinned-repo-item-content']") 
         repos = []
         for e in pinned_repos:
@@ -134,19 +141,42 @@ class GitHub(Scraper):
                         .getparent()    \
                         .attrib['href'])
                 description = e.find(".//p").text
-                repo = Repo(name+"-repo", url, description)
+                repo = Repo(name+"-repo", url, description, self.coin)
                 repos.append(repo)
         return repos
 
+    def is_repo(self):
+        if self.tree == None:
+            return None
+        t = self.tree.find(".//a[@class='header-search-scope no-underline']")
+        if t == None:
+            return False
+        if 'repository' in t.text:
+            return True
+        else:
+            return False
+
+    def repo(self):
+        if self.is_repo():
+            return Repo(self.name, self.url, "", self.coin)
+        pinned_repos = self.pinned_repos()
+        if pinned_repos == None:
+            return None
+        try:
+            return pinned_repos[0]
+        except IndexError:
+            return None
 
 class Repo(Scraper):
-    def __init__(self, name, url, description):
+    def __init__(self, name, url, description, coin):
         super().__init__(name, url)
         self.description = description
+        self.coin = coin
 
     def json(self):
         repo_data = {
                 'name': self.name,
+                'coin': self.coin,
                 'url': self.url,
                 'description': self.description,
                 'language': self.language(),
@@ -159,7 +189,10 @@ class Repo(Scraper):
     def language(self):
         langs = self.tree.findall(".//span[@class='lang']")
         langs = [l.text for l in langs]
-        return langs[0]
+        try:
+            return langs[0]
+        except:
+            return None
 
     def stars(self):
         stars = self.tree.find(".//a[@class='social-count js-social-count']") 
@@ -168,13 +201,19 @@ class Repo(Scraper):
 
     def forks(self):
         links = self.tree.findall(".//a") 
-        forks = [a for a in links if a.attrib['href'].endswith('network')][0]
+        try:
+            forks = [a for a in links if a.attrib['href'].endswith('network')][0]
+        except:
+            return None
         forks = forks.text.strip()
         return int(forks.replace(',',''))
 
     def watch(self):
         links = self.tree.findall(".//a") 
-        watch = [a for a in links if a.attrib['href'].endswith('watchers')][0]
+        try:
+            watch = [a for a in links if a.attrib['href'].endswith('watchers')][0]
+        except:
+            return None
         watch = watch.text.strip()
         return int(watch.replace(',',''))
 
@@ -229,6 +268,10 @@ class Coin(Scraper):
     def github(self):
         return GitHub(name=self.name + "-github", url=self.github_url(), coin=self.name)
 
+    def repo(self):
+        github = self.github()
+        return github.repo()
+
     def today(self):
         history = self.read_history()
         today = history.head(1)
@@ -250,7 +293,7 @@ class Coin(Scraper):
         try:
             df = pd.read_csv(os.path.join(self.dir,'{}-history.csv'.format(self.name)))
         except FileNotFoundError:
-            print(FileNotFoundError)
+            print("Downloading history data for {}".format(self.name))
             df = self.get_history()
         return df
 

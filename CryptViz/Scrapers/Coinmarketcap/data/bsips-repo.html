@@ -1,0 +1,1596 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  <link rel="dns-prefetch" href="https://assets-cdn.github.com">
+  <link rel="dns-prefetch" href="https://avatars0.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars1.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars2.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com">
+  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
+
+
+
+  <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/frameworks-7a12427f1445.css" media="all" rel="stylesheet" />
+  <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-49b55ea58ca8.css" media="all" rel="stylesheet" />
+  
+  
+  <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/site-92f236714908.css" media="all" rel="stylesheet" />
+  
+
+  <meta name="viewport" content="width=device-width">
+  
+  <title>GitHub - bitshares/bsips: BitShares Improvement Proposals and Protocols</title>
+  <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+  <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+  <meta property="fb:app_id" content="1401488693436528">
+
+    
+    <meta content="https://avatars3.githubusercontent.com/u/6914094?s=400&amp;v=4" property="og:image" /><meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="bitshares/bsips" property="og:title" /><meta content="https://github.com/bitshares/bsips" property="og:url" /><meta content="bsips - BitShares Improvement Proposals and Protocols" property="og:description" />
+
+  <link rel="assets" href="https://assets-cdn.github.com/">
+  
+  <meta name="pjax-timeout" content="1000">
+  
+  <meta name="request-id" content="AF9C:245E8:D30899:171F5EF:5A973B5F" data-pjax-transient>
+  
+
+  <meta name="selected-link" value="repo_source" data-pjax-transient>
+
+    <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+  <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+  <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
+    <meta name="google-analytics" content="UA-3769691-2">
+
+<meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="https://collector.githubapp.com/github-external/browser_event" name="octolytics-event-url" /><meta content="AF9C:245E8:D30899:171F5EF:5A973B5F" name="octolytics-dimension-request_id" /><meta content="iad" name="octolytics-dimension-region_edge" /><meta content="iad" name="octolytics-dimension-region_render" />
+<meta content="https://github.com/hydro_browser_events" name="hydro-events-url" />
+<meta content="/&lt;user-name&gt;/&lt;repo-name&gt;" data-pjax-transient="true" name="analytics-location" />
+
+
+
+
+  <meta class="js-ga-set" name="dimension1" content="Logged Out">
+
+
+  
+
+      <meta name="hostname" content="github.com">
+    <meta name="user-login" content="">
+
+      <meta name="expected-hostname" content="github.com">
+    <meta name="js-proxy-site-detection-payload" content="MTJmZTQ5MWM3NjQ1OTY1M2YxZWEwZmVmMTc5MWNkYTNhMzY4ZTc2MDZlNWEyZjc3YTY4ZTdkMjZmZmZlMWFmYXx7InJlbW90ZV9hZGRyZXNzIjoiMjA3LjIzLjIxOS4xODYiLCJyZXF1ZXN0X2lkIjoiQUY5QzoyNDVFODpEMzA4OTk6MTcxRjVFRjo1QTk3M0I1RiIsInRpbWVzdGFtcCI6MTUxOTg2MDU3NiwiaG9zdCI6ImdpdGh1Yi5jb20ifQ==">
+
+    <meta name="enabled-features" content="UNIVERSE_BANNER,FREE_TRIALS,MARKETPLACE_INSIGHTS,MARKETPLACE_INSIGHTS_CONVERSION_PERCENTAGES">
+
+  <meta name="html-safe-nonce" content="8a7538da707ec31b3c49259fd9e49763f3193069">
+
+  <meta http-equiv="x-pjax-version" content="015631af919f8d6a8d167696d7e90b7e">
+  
+
+      <link href="https://github.com/bitshares/bsips/commits/master.atom" rel="alternate" title="Recent Commits to bsips:master" type="application/atom+xml">
+
+  <meta name="description" content="bsips - BitShares Improvement Proposals and Protocols">
+  <meta name="go-import" content="github.com/bitshares/bsips git https://github.com/bitshares/bsips.git">
+
+  <meta content="6914094" name="octolytics-dimension-user_id" /><meta content="bitshares" name="octolytics-dimension-user_login" /><meta content="48125108" name="octolytics-dimension-repository_id" /><meta content="bitshares/bsips" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="48125108" name="octolytics-dimension-repository_network_root_id" /><meta content="bitshares/bsips" name="octolytics-dimension-repository_network_root_nwo" /><meta content="false" name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" />
+
+
+    <link rel="canonical" href="https://github.com/bitshares/bsips" data-pjax-transient>
+
+
+  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+
+  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+
+  <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
+  <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://assets-cdn.github.com/favicon.ico">
+
+<meta name="theme-color" content="#1e2327">
+
+
+
+<link rel="manifest" href="/manifest.json" crossOrigin="use-credentials">
+
+  </head>
+
+  <body class="logged-out env-production">
+    
+
+  <div class="position-relative js-header-wrapper ">
+    <a href="#start-of-content" tabindex="1" class="px-2 py-4 show-on-focus js-skip-to-content">Skip to content</a>
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
+
+    
+    
+    
+
+
+
+        <header class="Header header-logged-out  position-relative f4 py-3" role="banner">
+  <div class="container-lg d-flex px-3">
+    <div class="d-flex flex-justify-between flex-items-center">
+      <a class="header-logo-invertocat my-0" href="https://github.com/" aria-label="Homepage" data-ga-click="(Logged out) Header, go to homepage, icon:logo-wordmark">
+        <svg aria-hidden="true" class="octicon octicon-mark-github" height="32" version="1.1" viewBox="0 0 16 16" width="32"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+      </a>
+
+    </div>
+
+    <div class="HeaderMenu HeaderMenu--bright d-flex flex-justify-between flex-auto">
+        <nav class="mt-0">
+          <ul class="d-flex list-style-none">
+              <li class="ml-2">
+                <a href="/features" class="js-selected-navigation-item HeaderNavlink px-0 py-2 m-0" data-ga-click="Header, click, Nav menu - item:features" data-selected-links="/features /features/project-management /features/code-review /features/project-management /features/integrations /features">
+                  Features
+</a>              </li>
+              <li class="ml-4">
+                <a href="/business" class="js-selected-navigation-item HeaderNavlink px-0 py-2 m-0" data-ga-click="Header, click, Nav menu - item:business" data-selected-links="/business /business/security /business/customers /business">
+                  Business
+</a>              </li>
+
+              <li class="ml-4">
+                <a href="/explore" class="js-selected-navigation-item HeaderNavlink px-0 py-2 m-0" data-ga-click="Header, click, Nav menu - item:explore" data-selected-links="/explore /trending /trending/developers /integrations /integrations/feature/code /integrations/feature/collaborate /integrations/feature/ship showcases showcases_search showcases_landing /explore">
+                  Explore
+</a>              </li>
+
+              <li class="ml-4">
+                    <a href="/marketplace" class="js-selected-navigation-item HeaderNavlink px-0 py-2 m-0" data-ga-click="Header, click, Nav menu - item:marketplace" data-selected-links=" /marketplace">
+                      Marketplace
+</a>              </li>
+              <li class="ml-4">
+                <a href="/pricing" class="js-selected-navigation-item HeaderNavlink px-0 py-2 m-0" data-ga-click="Header, click, Nav menu - item:pricing" data-selected-links="/pricing /pricing/developer /pricing/team /pricing/business-hosted /pricing/business-enterprise /pricing">
+                  Pricing
+</a>              </li>
+          </ul>
+        </nav>
+
+      <div class="d-flex">
+          <div class="d-lg-flex flex-items-center mr-3">
+            <div class="header-search scoped-search site-scoped-search js-site-search" role="search">
+  <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/bitshares/bsips/search" class="js-site-search-form" data-scoped-search-url="/bitshares/bsips/search" data-unscoped-search-url="/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+    <label class="form-control header-search-wrapper js-chromeless-input-container">
+        <a href="/bitshares/bsips" class="header-search-scope no-underline">This repository</a>
+      <input type="text"
+        class="form-control header-search-input js-site-search-focus js-site-search-field is-clearable"
+        data-hotkey="s"
+        name="q"
+        value=""
+        placeholder="Search"
+        aria-label="Search this repository"
+        data-unscoped-placeholder="Search GitHub"
+        data-scoped-placeholder="Search"
+        autocapitalize="off">
+        <input type="hidden" class="js-site-search-type-field" name="type" >
+    </label>
+</form></div>
+
+          </div>
+
+        <span class="d-inline-block">
+            <div class="HeaderNavlink px-0 py-2 m-0">
+              <a class="text-bold text-white no-underline" href="/login?return_to=%2Fbitshares%2Fbsips" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">Sign in</a>
+                <span class="text-gray">or</span>
+                <a class="text-bold text-white no-underline" href="/join?source=header-repo" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">Sign up</a>
+            </div>
+        </span>
+      </div>
+    </div>
+  </div>
+</header>
+
+  </div>
+
+  <div id="start-of-content" class="show-on-focus"></div>
+
+    <div id="js-flash-container">
+</div>
+
+
+
+  <div role="main" class="application-main ">
+        <div itemscope itemtype="http://schema.org/SoftwareSourceCode" class="">
+    <div id="js-repo-pjax-container" data-pjax-container >
+      
+
+
+
+  
+
+
+
+  <div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav  ">
+    <div class="repohead-details-container clearfix container">
+
+      <ul class="pagehead-actions">
+  <li>
+      <a href="/login?return_to=%2Fbitshares%2Fbsips"
+    class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+    aria-label="You must be signed in to watch a repository" rel="nofollow">
+    <svg aria-hidden="true" class="octicon octicon-eye" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
+    Watch
+  </a>
+  <a class="social-count" href="/bitshares/bsips/watchers"
+     aria-label="40 users are watching this repository">
+    40
+  </a>
+
+  </li>
+
+  <li>
+      <a href="/login?return_to=%2Fbitshares%2Fbsips"
+    class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+    aria-label="You must be signed in to star a repository" rel="nofollow">
+    <svg aria-hidden="true" class="octicon octicon-star" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"/></svg>
+    Star
+  </a>
+
+    <a class="social-count js-social-count" href="/bitshares/bsips/stargazers"
+      aria-label="33 users starred this repository">
+      33
+    </a>
+
+  </li>
+
+  <li>
+      <a href="/login?return_to=%2Fbitshares%2Fbsips"
+        class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+        aria-label="You must be signed in to fork a repository" rel="nofollow">
+        <svg aria-hidden="true" class="octicon octicon-repo-forked" height="16" version="1.1" viewBox="0 0 10 16" width="10"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+        Fork
+      </a>
+
+    <a href="/bitshares/bsips/network" class="social-count"
+       aria-label="28 users forked this repository">
+      28
+    </a>
+  </li>
+</ul>
+
+      <h1 class="public ">
+  <svg aria-hidden="true" class="octicon octicon-repo" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+  <span class="author" itemprop="author"><a href="/bitshares" class="url fn" rel="author">bitshares</a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong itemprop="name"><a href="/bitshares/bsips" data-pjax="#js-repo-pjax-container">bsips</a></strong>
+
+</h1>
+
+    </div>
+    
+<nav class="reponav js-repo-nav js-sidenav-container-pjax container"
+     itemscope
+     itemtype="http://schema.org/BreadcrumbList"
+     role="navigation"
+     data-pjax="#js-repo-pjax-container">
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a href="/bitshares/bsips" class="js-selected-navigation-item selected reponav-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches repo_packages /bitshares/bsips" itemprop="url">
+      <svg aria-hidden="true" class="octicon octicon-code" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg>
+      <span itemprop="name">Code</span>
+      <meta itemprop="position" content="1">
+</a>  </span>
+
+    <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+      <a href="/bitshares/bsips/issues" class="js-selected-navigation-item reponav-item" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /bitshares/bsips/issues" itemprop="url">
+        <svg aria-hidden="true" class="octicon octicon-issue-opened" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg>
+        <span itemprop="name">Issues</span>
+        <span class="Counter">24</span>
+        <meta itemprop="position" content="2">
+</a>    </span>
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a href="/bitshares/bsips/pulls" class="js-selected-navigation-item reponav-item" data-hotkey="g p" data-selected-links="repo_pulls checks /bitshares/bsips/pulls" itemprop="url">
+      <svg aria-hidden="true" class="octicon octicon-git-pull-request" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+      <span itemprop="name">Pull requests</span>
+      <span class="Counter">0</span>
+      <meta itemprop="position" content="3">
+</a>  </span>
+
+
+
+
+  <a href="/bitshares/bsips/pulse" class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors dependency_graph pulse /bitshares/bsips/pulse">
+    <svg aria-hidden="true" class="octicon octicon-graph" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M16 14v1H0V0h1v14h15zM5 13H3V8h2v5zm4 0H7V3h2v10zm4 0h-2V6h2v7z"/></svg>
+    Insights
+</a>
+
+</nav>
+
+
+  </div>
+
+<div class="container new-discussion-timeline experiment-repo-nav  ">
+  <div class="repository-content ">
+
+    
+      <div class="signup-prompt-bg rounded-1">
+      <div class="signup-prompt p-4 text-center mb-4 rounded-1">
+        <div class="position-relative">
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/site/dismiss_signup_prompt" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XwXk8A49xt9Vouw2UEyEEb59qrnC5KJHFQ1jgbM0d1Gi/8t9mUDXnkO19r3g3HK4/30qZ/Iq3y603T2DrsGh1w==" /></div>
+            <button type="submit" class="position-absolute top-0 right-0 btn-link link-gray" data-ga-click="(Logged out) Sign up prompt, clicked Dismiss, text:dismiss">
+              Dismiss
+            </button>
+</form>
+          <h3 class="pt-2">Join GitHub today</h3>
+          <p class="col-6 mx-auto">GitHub is home to over 20 million developers working together to host and review code, manage projects, and build software together.</p>
+          <p class="pb-2">
+            <a class="btn btn-blue" href="/join?source=prompt-code" data-ga-click="(Logged out) Sign up prompt, clicked Sign up, text:sign-up">Sign up</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+  <div class="js-repo-meta-container">
+  <div class="repository-meta mb-0  js-repo-meta-edit js-details-container ">
+    <div class="repository-meta-content col-11 mb-1">
+          <span class="col-11 text-gray-dark mr-2" itemprop="about">
+            BitShares Improvement Proposals and Protocols
+          </span>
+          <span itemprop="url"><a href="http://bitshares.org" rel="nofollow">http://bitshares.org</a></span>
+    </div>
+
+  </div>
+
+    <div class="mb-3 repository-topics-container js-repository-topics-container js-details-container">
+      <div id="topics-list-container" data-url="/bitshares/bsips/settings/topics">
+          <div class="list-topics-container f6 mt-1">
+      <a href="/topics/bitshares" class="topic-tag topic-tag-link" data-ga-click="Topic, repository page" data-octo-click="topic_click" data-octo-dimensions="topic:bitshares">
+        bitshares
+      </a>
+  </div>
+
+
+      </div>
+
+    </div>
+</div>
+
+
+
+  <div class="overall-summary ">
+    <div class="stats-switcher-viewport js-stats-switcher-viewport">
+      <div class="stats-switcher-wrapper">
+      <ul class="numbers-summary">
+        <li class="commits">
+          <a data-pjax href="/bitshares/bsips/commits/master">
+              <svg aria-hidden="true" class="octicon octicon-history" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M8 13H6V6h5v2H8v5zM7 1C4.81 1 2.87 2.02 1.59 3.59L0 2v4h4L2.5 4.5C3.55 3.17 5.17 2.3 7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-.34.03-.67.09-1H.08C.03 7.33 0 7.66 0 8c0 3.86 3.14 7 7 7s7-3.14 7-7-3.14-7-7-7z"/></svg>
+              <span class="num text-emphasized">
+                182
+              </span>
+              commits
+          </a>
+        </li>
+        <li>
+          <a data-pjax href="/bitshares/bsips/branches">
+            <svg aria-hidden="true" class="octicon octicon-git-branch" height="16" version="1.1" viewBox="0 0 10 16" width="10"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+            <span class="num text-emphasized">
+              2
+            </span>
+            branches
+          </a>
+        </li>
+
+        <li>
+          <a href="/bitshares/bsips/releases">
+            <svg aria-hidden="true" class="octicon octicon-tag" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M7.73 1.73C7.26 1.26 6.62 1 5.96 1H3.5C2.13 1 1 2.13 1 3.5v2.47c0 .66.27 1.3.73 1.77l6.06 6.06c.39.39 1.02.39 1.41 0l4.59-4.59a.996.996 0 0 0 0-1.41L7.73 1.73zM2.38 7.09c-.31-.3-.47-.7-.47-1.13V3.5c0-.88.72-1.59 1.59-1.59h2.47c.42 0 .83.16 1.13.47l6.14 6.13-4.73 4.73-6.13-6.15zM3.01 3h2v2H3V3h.01z"/></svg>
+            <span class="num text-emphasized">
+              0
+            </span>
+            releases
+          </a>
+        </li>
+
+        <li>
+            <a href="/bitshares/bsips/graphs/contributors">
+  <svg aria-hidden="true" class="octicon octicon-organization" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M16 12.999c0 .439-.45 1-1 1H7.995c-.539 0-.994-.447-.995-.999H1c-.54 0-1-.561-1-1 0-2.634 3-4 3-4s.229-.409 0-1c-.841-.621-1.058-.59-1-3 .058-2.419 1.367-3 2.5-3s2.442.58 2.5 3c.058 2.41-.159 2.379-1 3-.229.59 0 1 0 1s1.549.711 2.42 2.088C9.196 9.369 10 8.999 10 8.999s.229-.409 0-1c-.841-.62-1.058-.59-1-3 .058-2.419 1.367-3 2.5-3s2.437.581 2.495 3c.059 2.41-.158 2.38-1 3-.229.59 0 1 0 1s3.005 1.366 3.005 4"/></svg>
+    <span class="num text-emphasized">
+      11
+    </span>
+    contributors
+</a>
+
+        </li>
+      </ul>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="file-navigation in-mid-page">
+
+    <details class="get-repo-select-menu js-menu-container float-right position-relative dropdown-details details-reset">
+  <summary class="btn btn-sm btn-primary">
+    Clone or download
+    <span class="dropdown-caret"></span>
+  </summary>
+  <div class="position-relative">
+    <div class="get-repo-modal dropdown-menu dropdown-menu-sw pb-0 js-toggler-container ">
+        <div class="clone-options https-clone-options">
+
+          <h4 class="mb-1">
+            Clone with HTTPS
+            <a class="muted-link" href="https://help.github.com/articles/which-remote-url-should-i-use" target="_blank" title="Which remote URL should I use?">
+              <svg aria-hidden="true" class="octicon octicon-question" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M6 10h2v2H6v-2zm4-3.5C10 8.64 8 9 8 9H6c0-.55.45-1 1-1h.5c.28 0 .5-.22.5-.5v-1c0-.28-.22-.5-.5-.5h-1c-.28 0-.5.22-.5.5V7H4c0-1.5 1.5-3 3-3s3 1 3 2.5zM7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7z"/></svg>
+            </a>
+          </h4>
+          <p class="mb-2 get-repo-decription-text">
+            Use Git or checkout with SVN using the web URL.
+          </p>
+
+          <div class="input-group js-zeroclipboard-container">
+  <input type="text" class="form-control input-monospace input-sm js-zeroclipboard-target js-url-field" value="https://github.com/bitshares/bsips.git" aria-label="Clone this repository at https://github.com/bitshares/bsips.git" readonly>
+  <div class="input-group-button">
+    <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><svg aria-hidden="true" class="octicon octicon-clippy" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg></button>
+  </div>
+</div>
+
+        </div>
+
+      <div class="mt-2">
+        
+<a href="/bitshares/bsips/archive/master.zip"
+   class="btn btn-outline get-repo-btn
+"
+   rel="nofollow"
+   data-ga-click="Repository, download zip, location:repo overview">
+  Download ZIP
+</a>
+
+      </div>
+    </div>
+  </div>
+</details>
+
+
+  <div class="BtnGroup float-right">
+
+    <a href="/bitshares/bsips/find/master"
+      class="btn btn-sm empty-icon float-right BtnGroup-item"
+      data-pjax
+      data-hotkey="t"
+      data-ga-click="Repository, find file, location:repo overview">
+      Find file
+    </a>
+  </div>
+
+  
+<div class="select-menu branch-select-menu js-menu-container js-select-menu float-left">
+  <button class=" btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w"
+    
+    type="button" aria-label="Switch branches or tags" aria-expanded="false" aria-haspopup="true">
+      <i>Branch:</i>
+      <span class="js-select-button css-truncate-target">master</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax>
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <svg aria-label="Close" class="octicon octicon-x js-menu-close" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
+        <span class="select-menu-title">Switch branches/tags</span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="form-control js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" data-filter-placeholder="Filter branches/tags" class="js-select-menu-tab" role="tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" data-filter-placeholder="Find a tag…" class="js-select-menu-tab" role="tab">Tags</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches" role="menu">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/bitshares/bsips/tree/bsip35"
+               data-name="bsip35"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                bsip35
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open selected"
+               href="/bitshares/bsips/tree/master"
+               data-name="master"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                master
+              </span>
+            </a>
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+        <button type="button" class="btn btn-sm disabled tooltipped tooltipped-n new-pull-request-btn" aria-label="You must be signed in to create a pull request">
+          New pull request
+        </button>
+
+  <div class="breadcrumb">
+    
+  </div>
+</div>
+
+
+  
+
+
+  <div class="commit-tease js-details-container Details">
+    <span class="float-right">
+      Latest commit
+      <a class="commit-tease-sha" href="/bitshares/bsips/commit/5bf3ddc5f6aebb3e30f6fe4b6d7e64031f4d1150" data-pjax>
+        5bf3ddc
+      </a>
+      <span itemprop="dateModified"><relative-time datetime="2018-02-27T13:08:58Z">Feb 27, 2018</relative-time></span>
+    </span>
+
+
+    <div class="d-flex no-wrap">
+      
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body tooltipped tooltipped-se tooltipped-align-left-1"
+       aria-label="xeroc">
+
+        <a href="/xeroc" data-skip-pjax="true" class="avatar">
+          <img src="https://avatars3.githubusercontent.com/u/117800?s=40&amp;v=4" width="20" height="20" alt="@xeroc">
+        </a>
+  </div>
+</div>
+
+      <div class="flex-auto f6">
+        
+      <a href="/bitshares/bsips/commits?author=xeroc"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by xeroc">xeroc</a>
+
+
+  
+
+
+          <a href="/bitshares/bsips/commit/5bf3ddc5f6aebb3e30f6fe4b6d7e64031f4d1150" class="message" data-pjax="true" title="Merge pull request #59 from bitshares/bsip35
+
+Add BSIP 35: Mitigate Rounding Issue On Order Matching">Merge pull request</a> <a href="https://github.com/bitshares/bsips/pull/59" class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="298133400" data-permission-text="Issue title is private" data-url="https://github.com/bitshares/bsips/issues/59">#59</a> <a href="/bitshares/bsips/commit/5bf3ddc5f6aebb3e30f6fe4b6d7e64031f4d1150" class="message" data-pjax="true" title="Merge pull request #59 from bitshares/bsip35
+
+Add BSIP 35: Mitigate Rounding Issue On Order Matching">from bitshares/bsip35</a>
+            <span class="hidden-text-expander inline">
+              <button type="button" class="ellipsis-expander js-details-target" aria-expanded="false">&hellip;</button>
+            </span>
+
+          <div class="commit-desc"><pre class="text-small">Add BSIP 35: Mitigate Rounding Issue On Order Matching</pre></div>
+      </div>
+    </div>
+  </div>
+
+
+
+<div class="file-wrap">
+
+  <a href="/bitshares/bsips/tree/5bf3ddc5f6aebb3e30f6fe4b6d7e64031f4d1150" class="d-none js-permalink-shortcut" data-hotkey="y">Permalink</a>
+
+  <table class="files js-navigation-container js-active-navigation-container" data-pjax>
+
+
+    <tbody>
+      <tr class="warning include-fragment-error">
+        <td class="icon"><svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"/></svg></td>
+        <td class="content" colspan="3">Failed to load latest commit information.</td>
+      </tr>
+
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/tree/master/bsip-0008" class="js-navigation-open" id="919ac82467a363bbc5ccc6b8bfc028d7-5dcac5efbf16f3004176ca6653c84045720bd5e5" title="bsip-0008">bsip-0008</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/3d676c8a02e3b5615da2ac5221c05f3f55649fab" class="message" data-pjax="true" title="Rename 0008-&gt;0007 and 0007-&gt;0008">Rename 0008-&gt;0007 and 0007-&gt;0008</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2015-12-17T09:09:48Z">Dec 17, 2015</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/tree/master/bsip-0009" class="js-navigation-open" id="aa2543aa00dc40997d62c93131deafb6-bc22b8b2ad50ce8fb984838e3ad5b42dff8bb9e6" title="bsip-0009">bsip-0009</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/84575a20e20e8867592667bee50d8440646a4cf6" class="message" data-pjax="true" title="bsip#9: Benefit Societies">bsip#9: Benefit Societies</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2015-12-28T11:23:49Z">Dec 28, 2015</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/BSIPs-Template.md" class="js-navigation-open" id="0c81ca975e59e436287c917ff43048da-4cfbe3dbebf47b574101cb0a492ffefc7448bde1" title="BSIPs-Template.md">BSIPs-Template.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/94165cb32ccac496966316b1a6b7dde09e5e69c2" class="message" data-pjax="true" title="Slight modifications to BSIP procedure">Slight modifications to BSIP procedure</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-03-09T13:26:21Z">Mar 9, 2016</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/README.md" class="js-navigation-open" id="04c6e90faac2675aa89e2176d2eec7d8-3cc1a7de06a764b687008650cb50a278914b2c3c" title="README.md">README.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/3831794d4ea2df56ebe53724bb3729f68dc4cc03" class="message" data-pjax="true" title="Merge branch &#39;master&#39; into bsip35">Merge branch 'master' into bsip35</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2018-02-26T11:21:13Z">Feb 26, 2018</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0001.md" class="js-navigation-open" id="959ef3b82361e5c74582eb89e06be278-393537cafd657ee0356b20fa7b63a0d433a7ad28" title="bsip-0001.md">bsip-0001.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/94165cb32ccac496966316b1a6b7dde09e5e69c2" class="message" data-pjax="true" title="Slight modifications to BSIP procedure">Slight modifications to BSIP procedure</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-03-09T13:26:21Z">Mar 9, 2016</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0002.md" class="js-navigation-open" id="694c4bee3f3b2f19474b43403d2f66c9-e2c23f2747c734e800408dccdd28264a25c9d997" title="bsip-0002.md">bsip-0002.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/b5a476e3158c6b8b7ee317721fa2814a743a91d1" class="message" data-pjax="true" title="bsip#2: status -&gt; installed">bsip#2: status -&gt; installed</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-11-11T11:05:05Z">Nov 11, 2017</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0003.md" class="js-navigation-open" id="d16935a56602441d6ccedc7417d60fbf-3bdced2cb9e142bc6d76e4c54b773a14033c1025" title="bsip-0003.md">bsip-0003.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/c947718973611308cc91ab33f12f3ce11d01559b" class="message" data-pjax="true" title="[BSIPs-0-8] Improved wording, replaces .org with .eu address (fabian)">[BSIPs-0-8] Improved wording, replaces .org with .eu address (fabian)</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2015-12-17T12:24:20Z">Dec 17, 2015</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0004.md" class="js-navigation-open" id="d94e27f8c57ac7780213fdd4ac300aef-d052bff3e62626c6dc3cf7476d3fa18010d36685" title="bsip-0004.md">bsip-0004.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/019623f4a97ea9a4e761ddac4b245374951c6703" class="message" data-pjax="true" title="Update bsip-0004.md">Update bsip-0004.md</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-01-02T23:21:13Z">Jan 2, 2016</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0005.md" class="js-navigation-open" id="90455c9c73788ef828f5d9b50becba9d-a6e63f41fd7dfcf932211435487a935ad263f1b2" title="bsip-0005.md">bsip-0005.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/bb2703f8619c74097ab73f78e0254959ac5f11ee" class="message" data-pjax="true" title="bsip#5: status -&gt; deferred">bsip#5: status -&gt; deferred</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2015-12-30T08:49:38Z">Dec 30, 2015</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0006.md" class="js-navigation-open" id="ab3c346dbf19c91a6f5588f685c8d248-a983c65985a150c85cd6419fe0ea72219ebb9261" title="bsip-0006.md">bsip-0006.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/c947718973611308cc91ab33f12f3ce11d01559b" class="message" data-pjax="true" title="[BSIPs-0-8] Improved wording, replaces .org with .eu address (fabian)">[BSIPs-0-8] Improved wording, replaces .org with .eu address (fabian)</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2015-12-17T12:24:20Z">Dec 17, 2015</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0007.md" class="js-navigation-open" id="31b289d6d33be119941b8a7b0501e3df-c7b868b1a627987e6aea2eb19e69bf98b0957e41" title="bsip-0007.md">bsip-0007.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/3fcdc23991b7f429d090fc9145a8387b36f5f17d" class="message" data-pjax="true" title="bsip#7 type and status update">bsip#7 type and status update</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-11-11T11:08:02Z">Nov 11, 2017</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0008.md" class="js-navigation-open" id="0f003e83c5cb2de40e1bc70ded08588b-8aea1b9b87ec939ab5ddc96093c7e9adc5896a78" title="bsip-0008.md">bsip-0008.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/daa382e54d47e4c85350a899366f6859cb212ab0" class="message" data-pjax="true" title="bsip#8: fixed fee burn and typos">bsip#8: fixed fee burn and typos</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2015-12-29T09:30:38Z">Dec 29, 2015</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0009.md" class="js-navigation-open" id="8707e064fe8df03ac7ec52f5ec038b40-c98036b4a07609254b771e4a3b288c40920deac3" title="bsip-0009.md">bsip-0009.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/877958facaa6f0895af18be3cfb682061228ad73" class="message" data-pjax="true" title="bsip#9: Added another link">bsip#9: Added another link</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2015-12-29T09:56:19Z">Dec 29, 2015</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0010.md" class="js-navigation-open" id="9801e8d75c093cbd6e8a70905ba8d443-b3c3854876beb782581602eea569abca081e3af4" title="bsip-0010.md">bsip-0010.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/a63a1a0994c5862cdea12d1f2c88610c044e54a5" class="message" data-pjax="true" title="Known issues reformatted
+
+Known issues / limitations section turned into a table. Also added fiat-stablity issue as advised by tbone.">Known issues reformatted</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-02-02T15:40:03Z">Feb 2, 2016</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0015.md" class="js-navigation-open" id="5020ad913e92f2986798ff22b285e31f-4950cf4b07524343d59db5e70bc2a9bc9fe47f33" title="bsip-0015.md">bsip-0015.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/eee3a16b314766ee865864d8f6fce81536d9afb0" class="message" data-pjax="true" title="change bsip#15 status to installed">change bsip#15 status to installed</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-11-11T11:10:00Z">Nov 11, 2017</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0016.md" class="js-navigation-open" id="9a87bc38db46f18d0efb4ea74ab017c9-2f3ecc1299f211b38d65811d26cf0e2ac9efc0fc" title="bsip-0016.md">bsip-0016.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/8196dd75dfa56ace351abab1cc3a0c963d1a246b" class="message" data-pjax="true" title="Change bsip#16 status to installed">Change bsip#16 status to installed</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-11-11T11:11:53Z">Nov 11, 2017</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0017.md" class="js-navigation-open" id="c59d31fda47d56a4ddd809dfe5712e5a-640c4ed38371e78634dbcb781f26519222d7e2fc" title="bsip-0017.md">bsip-0017.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/4c1d86c58fd767f8104be2e622386d2fb6349759" class="message" data-pjax="true" title="Minor clarification">Minor clarification</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-11-13T16:22:47Z">Nov 13, 2016</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0018.md" class="js-navigation-open" id="c9c6a5ddd78959172f4a56b686f5a0d3-b68ac0ffc06fe0c67333e28996f7c7c6a3167161" title="bsip-0018.md">bsip-0018.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/2b214b2ffcd3510b7bdb6c3a8397a13cf2dbeee8" class="message" data-pjax="true" title="bsip18: update status -&gt; installed">bsip18: update status -&gt; installed</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-12-12T13:50:47Z">Dec 12, 2017</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0019.md" class="js-navigation-open" id="a5a7357283297c24d4b5465f4592c763-81cf5ad8b1cd0852c98f6b955d19c8beca08af42" title="bsip-0019.md">bsip-0019.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/1281d052152d94f2edba1d230dd5f7cd167f01fd" class="message" data-pjax="true" title="Deferr 19 &amp; 20">Deferr 19 &amp; 20</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-11-30T08:06:50Z">Nov 30, 2017</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0020.md" class="js-navigation-open" id="66e5ff0ff05b78defeb66e691317cddb-b0ef7b5c501448d9f4fa3491336b894432023f61" title="bsip-0020.md">bsip-0020.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/1281d052152d94f2edba1d230dd5f7cd167f01fd" class="message" data-pjax="true" title="Deferr 19 &amp; 20">Deferr 19 &amp; 20</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-11-30T08:06:50Z">Nov 30, 2017</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0021.md" class="js-navigation-open" id="7046abeb322e1612da1eae7c32e9c82e-ee77bdf27dd96cd438193eb4b9894b4879fcc82f" title="bsip-0021.md">bsip-0021.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/742f1a617f22fda1aec11985628d2f8860be2a23" class="message" data-pjax="true" title="New BSIPs &amp; Small changes to past BSIPs
+
+New: 23 &amp; 24
+Changes to old: Link to customminer&#39;s profile for contact.">New BSIPs &amp; Small changes to past BSIPs</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-08-31T12:43:08Z">Aug 31, 2017</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0022.md" class="js-navigation-open" id="52270866995f6b9f358512a4d74dfbe5-9cfa195f56738976f9fb438b9dd271cc56241125" title="bsip-0022.md">bsip-0022.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/742f1a617f22fda1aec11985628d2f8860be2a23" class="message" data-pjax="true" title="New BSIPs &amp; Small changes to past BSIPs
+
+New: 23 &amp; 24
+Changes to old: Link to customminer&#39;s profile for contact.">New BSIPs &amp; Small changes to past BSIPs</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-08-31T12:43:08Z">Aug 31, 2017</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0023.md" class="js-navigation-open" id="c7d924007e44b05c5a02ac3bb4618d72-f71ad1e4f46925b19e6e831afab6ed2bba4b0548" title="bsip-0023.md">bsip-0023.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/91e93502468704c32adcd14443bec9f84a85131d" class="message" data-pjax="true" title="Rename BSIP-0023.md to bsip-0023.md">Rename BSIP-0023.md to bsip-0023.md</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-10-16T19:56:50Z">Oct 16, 2017</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0024.md" class="js-navigation-open" id="31f5639959844bed650314a1b509cde6-3169c6c7f750065fa5a2290bcb56786b50650bfe" title="bsip-0024.md">bsip-0024.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/bc956ae152ae4b042bfee86d5596d57aad8f8478" class="message" data-pjax="true" title="Rename BSIP-0024.md to bsip-0024.md">Rename BSIP-0024.md to bsip-0024.md</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-10-16T19:57:09Z">Oct 16, 2017</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0025.md" class="js-navigation-open" id="1d0028177ffeed0d8c96522561bcecaa-89ad639613bde6f04cb0a7f108a337cc9fa3ec01" title="bsip-0025.md">bsip-0025.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/54c16443109c72f8b2fc9a8be0e8f85d88da512a" class="message" data-pjax="true" title="New BSIP 29">New BSIP 29</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2018-01-30T08:15:22Z">Jan 30, 2018</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0026.md" class="js-navigation-open" id="34b30c1e721e2ea7d108d96e411a6713-14d67c347b2317c4fe5cc8eda2b564c4b25c8633" title="bsip-0026.md">bsip-0026.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/30477cb3ff19166dddfcd07c9cfd682954435c3b" class="message" data-pjax="true" title="Update status of BSIP 26 and 27 to accepted">Update status of BSIP 26 and 27 to accepted</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2018-01-27T20:31:36Z">Jan 27, 2018</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0027.md" class="js-navigation-open" id="9bffc489bd5d59b639e1472f26a3af43-c273019a926e3d3005361e9e9248fd40708dd80a" title="bsip-0027.md">bsip-0027.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/30477cb3ff19166dddfcd07c9cfd682954435c3b" class="message" data-pjax="true" title="Update status of BSIP 26 and 27 to accepted">Update status of BSIP 26 and 27 to accepted</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2018-01-27T20:31:36Z">Jan 27, 2018</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0028.md" class="js-navigation-open" id="9872efd2ef0aabb019d768757433134b-6a6dc00dc3b831a4b1640c9d6274d1eda6651409" title="bsip-0028.md">bsip-0028.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/4ce96f486308c86ae717521cca16bd2c53114fa1" class="message" data-pjax="true" title="readd descriptive info
+
+and added possibility to change worker `name` field.">readd descriptive info</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-11-11T22:19:00Z">Nov 11, 2017</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0029.md" class="js-navigation-open" id="17ee095fdb56b34dd07918a71eb8150a-96dc1d1d6e27dbf30a4920fc87a712247f66818f" title="bsip-0029.md">bsip-0029.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/3a526a410924513a91846d20b55cd603a847651d" class="message" data-pjax="true" title="worker added">worker added</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2018-01-30T08:20:42Z">Jan 30, 2018</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0030.md" class="js-navigation-open" id="04220c3919778f13e56cc8f521b5ffff-11340d0422fab3cb6187e52d87921718edff353c" title="bsip-0030.md">bsip-0030.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/2255360034ad7e04f976604bc576413688444df5" class="message" data-pjax="true" title="bsip30: fix typo">bsip30: fix typo</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2018-02-18T13:22:19Z">Feb 18, 2018</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0031.md" class="js-navigation-open" id="797407026aaf6017df84b0e6e1916905-e4fe09a12a3d0c063ea8834c759f08d440989fd3" title="bsip-0031.md">bsip-0031.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/f350d86af9ce7c4c078301a7342ed4ec768c081f" class="message" data-pjax="true" title="bsip31: fix typo">bsip31: fix typo</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2018-02-18T13:23:02Z">Feb 18, 2018</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0032.md" class="js-navigation-open" id="4f642303e0aef3944b1ea763f7e1a683-61b10251187ba655c62a5660b533c47f98d7f51f" title="bsip-0032.md">bsip-0032.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/21f3d15cbcf9ae563c1b13211d9450b016247131" class="message" data-pjax="true" title="bsip32: text reorganization">bsip32: text reorganization</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2018-02-18T21:19:57Z">Feb 18, 2018</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0033.md" class="js-navigation-open" id="90909169a009d53ab94b3072727eaf03-4fe4e4b5039f23e67a5848998ec75612bb0a2fd2" title="bsip-0033.md">bsip-0033.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/27e1975b2843bd3ea9a9a95785bba5da51e27ba4" class="message" data-pjax="true" title="bsip33: text reorganization">bsip33: text reorganization</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2018-02-19T10:53:41Z">Feb 19, 2018</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0034.md" class="js-navigation-open" id="3f8f426ae389429ce22fc98ca4f6c5af-1635b3836444a3c01177a6eaabdee206b4145e74" title="bsip-0034.md">bsip-0034.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/f22084690073f8631803be2d5c93ff30c9f5b71e" class="message" data-pjax="true" title="bsip34: wording change and text reorganization">bsip34: wording change and text reorganization</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2018-02-18T21:56:55Z">Feb 18, 2018</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0035.md" class="js-navigation-open" id="ead4aed5f6d399bf0089b932037c0167-9a1a70dd2b43aa451ac2118c4a1875de8687e978" title="bsip-0035.md">bsip-0035.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/2587dc7d49e03f9634609ae76acd06cbc9939254" class="message" data-pjax="true" title="bsip35: add link in motivation section.">bsip35: add link in motivation section.</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2018-02-25T22:37:15Z">Feb 25, 2018</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0036.md" class="js-navigation-open" id="6701a472f2f4ef540b541d05e06511ce-067ca5909c160146d108ef9ea9c76b022b262b3b" title="bsip-0036.md">bsip-0036.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/e56ccde0229d8acc1f9a76228983d8290510cbfc" class="message" data-pjax="true" title="change title">change title</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2018-02-25T22:43:54Z">Feb 25, 2018</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/bitshares/bsips/blob/master/bsip-0037.md" class="js-navigation-open" id="ea6fbd37add804f4b1619af072c2ee27-e9c32ee6fdb29c85b94ce26c4d31e1107937eac0" title="bsip-0037.md">bsip-0037.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/bitshares/bsips/commit/b5d70d616f93f5d325b6c4f9ee721fb94cc24014" class="message" data-pjax="true" title="change title">change title</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2018-02-25T22:45:17Z">Feb 25, 2018</time-ago></span>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+
+  <div id="readme" class="readme boxed-group clearfix announce instapaper_body md">
+    <h3>
+      <svg aria-hidden="true" class="octicon octicon-book" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M3 5h4v1H3V5zm0 3h4V7H3v1zm0 2h4V9H3v1zm11-5h-4v1h4V5zm0 2h-4v1h4V7zm0 2h-4v1h4V9zm2-6v9c0 .55-.45 1-1 1H9.5l-1 1-1-1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h5.5l1 1 1-1H15c.55 0 1 .45 1 1zm-8 .5L7.5 3H2v9h6V3.5zm7-.5H9.5l-.5.5V12h6V3z"/></svg>
+      README.md
+    </h3>
+
+      <article class="markdown-body entry-content" itemprop="text"><h1><a href="#bitshares-improvement-proposal" aria-hidden="true" class="anchor" id="user-content-bitshares-improvement-proposal"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>BitShares Improvement Proposal</h1>
+<p>BSIP stands for BitShares Improvement Proposal. A BSIP is a design document
+providing information to the BitShares community, or describing a new feature for
+BitShares or its processes or environment. BSIPs provide a concise
+technical specification of features and a rationale for them.</p>
+<p>The distinct document <a href="/bitshares/bsips/blob/master/bsip-0001.md">BSIP Purpose and Guidelines</a> gives a more
+detailed explanation.</p>
+<h1><a href="#available-bsips" aria-hidden="true" class="anchor" id="user-content-available-bsips"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Available BSIPs</h1>
+<table>
+<thead>
+<tr>
+<th>Number</th>
+<th>Title</th>
+<th>Owner</th>
+<th>Type</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0001.md">1</a></td>
+<td>BSIP Purpose and Guidelines</td>
+<td>Fabian Schuh</td>
+<td>Informational</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0002.md">2</a></td>
+<td>Refund Create Order Fees on Cancel</td>
+<td>Daniel Larimer</td>
+<td>Protocol</td>
+<td>Installed</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0003.md">3</a></td>
+<td>Maker / Taker Market Fees Flag</td>
+<td>Daniel Larimer</td>
+<td>Protocol</td>
+<td>Deferred</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0004.md">4</a></td>
+<td>Distribute Market Fees on Core Asset to Referral Program</td>
+<td>Daniel Larimer</td>
+<td>Protocol</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0005.md">5</a></td>
+<td>Expiring Votes for Witnesses</td>
+<td>Daniel Larimer</td>
+<td>Protocol</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0006.md">6</a></td>
+<td>Market Maker Incentivization</td>
+<td>Daniel Larimer</td>
+<td>Protocol</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0007.md">7</a></td>
+<td>Fee Backed Assets (FBA)</td>
+<td>Daniel Larimer</td>
+<td>Protocol</td>
+<td>Installed</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0008.md">8</a></td>
+<td>Privacy (STEALTH) Mode</td>
+<td>Daniel Larimer</td>
+<td>Protocol</td>
+<td>Installed</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0009.md">9</a></td>
+<td>Benefit Society</td>
+<td>Fabian Schuh</td>
+<td>Protocol</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0010.md">10</a></td>
+<td>Percentage-based transfer fee solution based on CER</td>
+<td>Jakub Zarembinski</td>
+<td>Protocol</td>
+<td>Accepted</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0015.md">15</a></td>
+<td>Disable negative voting on workers</td>
+<td>Daniel Larimer</td>
+<td>Protocol</td>
+<td>Installed</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0016.md">16</a></td>
+<td>Optimization to Force Settlement Parameters of BitCNY</td>
+<td>Jerry Liu</td>
+<td>Protocol</td>
+<td>Installed</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0017.md">17</a></td>
+<td>Revive BitAsset after Global Settlement</td>
+<td>Peter Conrad</td>
+<td>Protocol</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0018.md">18</a></td>
+<td>Revive BitAsset through buying Settlement Pool</td>
+<td>Fabian Schuh</td>
+<td>Protocol</td>
+<td>Installed</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0019.md">19</a></td>
+<td>Introducing profit sharing/dividends to Bitshares (MPA only)</td>
+<td>Customminer</td>
+<td>Protocol</td>
+<td>Deferred</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0020.md">20</a></td>
+<td>Introducing profit sharing/dividends to Bitshares (UIA only)</td>
+<td>Customminer</td>
+<td>Protocol</td>
+<td>Deferred</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0021.md">21</a></td>
+<td>Introducing the 'Coin-Age' statistic to Bitshares assets</td>
+<td>Customminer</td>
+<td>Protocol</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0022.md">22</a></td>
+<td>Introducing expiring votes for Witnesses, Committie members &amp; Proxies within the Bitshares network</td>
+<td>Customminer</td>
+<td>Protocol</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0023.md">23</a></td>
+<td>Sharedropping an UIA against an external cryptocurrency distribution snapshot</td>
+<td>Customminer</td>
+<td>Protocol</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0024.md">24</a></td>
+<td>Locking Bitshares away as 'Bitshares Influence' for voting privileges on the BTS DEX</td>
+<td>Customminer</td>
+<td>Protocol</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0025.md">25</a></td>
+<td>Transaction Flat-Rates with Weighted Rate-Limitation</td>
+<td>Fabian Schuh</td>
+<td>Protocol</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0026.md">26</a></td>
+<td>Refund Order Creation Fee in Originally Paid Asset on Cancel</td>
+<td>Abit More</td>
+<td>Protocol</td>
+<td>Accepted</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0027.md">27</a></td>
+<td>Asset Issuer Reclaim Fee Pool Funds</td>
+<td>Abit More</td>
+<td>Protocol</td>
+<td>Accepted</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0028.md">28</a></td>
+<td>Worker Proposal Improvements</td>
+<td>Bill Butler</td>
+<td>Protocol</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0029.md">29</a></td>
+<td>Asset issue change to require owner authority</td>
+<td>Fabian Schuh</td>
+<td>Protocol</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0030.md">30</a></td>
+<td>Always Allow Increasing Collateral Ratio If Debt Not Increased</td>
+<td>Abit More</td>
+<td>Protocol</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0031.md">31</a></td>
+<td>Update Short Position's Margin Call Price After Partially Called Or Settled</td>
+<td>Abit More</td>
+<td>Protocol</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0032.md">32</a></td>
+<td>Always Match Orders At Maker Price</td>
+<td>Abit More</td>
+<td>Protocol</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0033.md">33</a></td>
+<td>Maker Orders With Better Prices Take Precedence</td>
+<td>Abit More</td>
+<td>Protocol</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0034.md">34</a></td>
+<td>Always Trigger Margin Call When Call Price Above Or At Price Feed</td>
+<td>Abit More</td>
+<td>Protocol</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0035.md">35</a></td>
+<td>Mitigate Rounding Issue On Order Matching</td>
+<td>Abit More</td>
+<td>Protocol</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0036.md">36</a></td>
+<td>Remove expired price feeds on maintenance interval</td>
+<td>oxarbitrage</td>
+<td>Protocol</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="/bitshares/bsips/blob/master/bsip-0037.md">37</a></td>
+<td>Allow new asset name to end with a number</td>
+<td>oxarbitrage</td>
+<td>Protocol</td>
+<td>Draft</td>
+</tr></tbody></table>
+</article>
+  </div>
+
+
+  </div>
+  <div class="modal-backdrop js-touch-events"></div>
+</div>
+
+    </div>
+  </div>
+
+  </div>
+
+      
+<div class="footer container-lg px-3" role="contentinfo">
+  <div class="position-relative d-flex flex-justify-between py-6 mt-6 f6 text-gray border-top border-gray-light ">
+    <ul class="list-style-none d-flex flex-wrap ">
+      <li class="mr-3">&copy; 2018 <span title="0.24237s from unicorn-4289892846-s8nzr">GitHub</span>, Inc.</li>
+        <li class="mr-3"><a href="https://help.github.com/articles/github-terms-of-service/" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+        <li class="mr-3"><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+        <li class="mr-3"><a href="https://help.github.com/articles/github-security/" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li class="mr-3"><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+        <li><a href="https://help.github.com" data-ga-click="Footer, go to help, text:help">Help</a></li>
+    </ul>
+
+    <a href="https://github.com" aria-label="Homepage" class="footer-octicon" title="GitHub">
+      <svg aria-hidden="true" class="octicon octicon-mark-github" height="24" version="1.1" viewBox="0 0 16 16" width="24"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+</a>
+    <ul class="list-style-none d-flex flex-wrap ">
+        <li class="mr-3"><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact GitHub</a></li>
+      <li class="mr-3"><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li class="mr-3"><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li class="mr-3"><a href="https://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li class="mr-3"><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+
+    </ul>
+  </div>
+</div>
+
+
+
+  <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+    <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"/></svg>
+    <button type="button" class="flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+      <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
+    </button>
+    You can't perform that action at this time.
+  </div>
+
+
+    <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/compat-1911c1177eb9.js" type="application/javascript"></script>
+    <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/frameworks-77bc35d778c5.js" type="application/javascript"></script>
+    
+    <script async="async" crossorigin="anonymous" src="https://assets-cdn.github.com/assets/github-4e9bb34c268a.js" type="application/javascript"></script>
+    
+    
+    
+    
+  <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
+    <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"/></svg>
+    <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+  </div>
+  <div class="facebox" id="facebox" style="display:none;">
+  <div class="facebox-popup">
+    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
+    </div>
+    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
+      <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
+    </button>
+  </div>
+</div>
+
+  
+
+  </body>
+</html>
+

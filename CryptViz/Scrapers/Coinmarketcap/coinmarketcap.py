@@ -2,6 +2,7 @@ import requests
 from lxml import etree
 import pandas as pd
 import os
+import datetime
 import urllib.parse
 
 class CoinMarketcap():
@@ -289,16 +290,29 @@ class Coin(Scraper):
         today = self.today()
         return int(today['Market Cap'][0])
 
-    def read_history(self):
+    def read_history(self, start=None,end=None):
+        filename = os.path.join(self.dir,'{}-history.csv'.format(self.name))
         try:
-            df = pd.read_csv(os.path.join(self.dir,'{}-history.csv'.format(self.name)))
+            # Check for freshness. If more than a day old, re-download
+            modification_time = datetime.datetime.fromtimestamp(
+                    int(os.path.getmtime(filename))
+                    )
+            now = datetime.datetime.now()
+            delta = now - modification_time
+
+            if delta.days > 1:
+                df = self.get_history(start, end)
+            else:
+                df = pd.read_csv(filename)
         except FileNotFoundError:
-            print("Downloading history data for {}".format(self.name))
-            df = self.get_history()
+            df = self.get_history(start, end)
         return df
 
-    def get_history(self):
+    def get_history(self, start=None,end=None):
         url = self.url + "/historical-data"
+        if start and end:
+            url = url + "/?start={0}&end={1}".format(start, end)
+        print("Downloading history data for {}".format(self.name))
         df = pd.read_html(url)[0]
         df.to_csv(os.path.join(self.dir,'{}-history.csv'.format(self.name)))
         return df

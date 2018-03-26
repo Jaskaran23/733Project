@@ -290,7 +290,7 @@ class Coin(Scraper):
         today = self.today()
         return int(today['Market Cap'][0])
 
-    def read_history(self, start=None,end=None):
+    def read_history(self, start=None,end=None, cache_days=7):
         filename = os.path.join(self.dir,'{}-history.csv'.format(self.name))
         try:
             # Check for freshness. If more than a day old, re-download
@@ -300,7 +300,7 @@ class Coin(Scraper):
             now = datetime.datetime.now()
             delta = now - modification_time
 
-            if delta.days > 1:
+            if delta.days > cache_days:
                 df = self.get_history(start, end)
             else:
                 df = pd.read_csv(filename)

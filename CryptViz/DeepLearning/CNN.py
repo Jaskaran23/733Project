@@ -12,5 +12,5 @@ class Evaluator:
     def __init__(self):
         return
 
-    def evaluate(coin_history, n, f):
+    #  def evaluate(coin_history, n, f):
 

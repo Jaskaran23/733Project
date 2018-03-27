@@ -16,10 +16,11 @@ class Evaluator:
     def init_model(self):
         model = Sequential()
         model.add(Conv2D(filters=4,kernel_size=(1, 3), input_shape=[100,60,8]))
-        model.add(Activation('elu'))
+        model.add(Activation('selu'))
         model.add(Conv2D(20, (1,58)))
-        model.add(Activation('elu'))
+        model.add(Activation('selu'))
         model.add(Conv2D(1, (1,1)))
+        model.add(Flatten())
         model.add(Activation('sigmoid'))
 
         model.compile(optimizer='rmsprop',

@@ -8,8 +8,8 @@ Discussion can be found on the [slack channel](https://sfu-big-data.slack.com/me
 ### Components
 1. Coinmarketcap Scraper
 2. GitHub Scraper
-3. [Exploratory Data Analysis with Pandas](https://github.com/LinuxIsCool/733Project/blob/master/CryptViz/CoinMarketcap.ipynb)
-4. [Price Prediction with CNN](https://github.com/LinuxIsCool/733Project/blob/master/CryptViz/deepTech.ipynb)
+3. [Exploratory Data Analysis with Pandas](https://github.com/LinuxIsCool/733Project/blob/master/CryptViz/CoinMarketcapEDA.ipynb)
+4. [Price Prediction with CNN](https://github.com/LinuxIsCool/733Project/blob/master/CryptViz/CNNPrediction.ipynb)
 5. [Price Prediction with LSTM]()
 6. Twitter Streaming
 7. [Twitter Integration and Analysis]()

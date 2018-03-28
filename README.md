@@ -7,13 +7,12 @@ Discussion can be found on the [slack channel](https://sfu-big-data.slack.com/me
 
 ### Components
 1. Coinmarketcap Scraper
-2. Django REST API
-3. GitHub Scraper
-4. Twitter Scraper
-5. Forum Scraper
-6. Web Scraper
-7. EDA
-8. Web Visualization
+2. GitHub Scraper
+3. [Exploratory Data Analysis with Pandas](https://github.com/LinuxIsCool/733Project/blob/master/CryptViz/CoinMarketcap.ipynb)
+4. [Price Prediction with CNN](https://github.com/LinuxIsCool/733Project/blob/master/CryptViz/deepTech.ipynb)
+5. [Price Prediction with LSTM]()
+6. Twitter Streaming
+7. [Twitter Integration and Analysis]()
 
 ### Usage
 #### Installation
@@ -41,10 +40,6 @@ Install kernal to use in jupyter notebooks
 	ipython kernel install --user --name=733Project
 
 
-#### Running the server
-	cd CryptViz/
-	python manage.py runserver
-
 #### Launching the Notebooks
 	jupyter-notebook CoinMarketcap.ipynb
      
@@ -55,20 +50,6 @@ Get list of top 100 coins(ranked by market cap) from coinmarketcap.com
 	cmk = coinmarketcap.CoinMarketcap()
 	coins = cmk.coin_names()
 
-#### Posting to Database
-Posting static data for top 100 coins. (Website URL, Git URL, Forum URL)
-
-	for coin in top_100:
-		static_data = cmk.get_static(coin)
-		url = "api/" + coin
-		requests.post(url, coin_data)
-
-Posting time series data for top 100 coins. One period is one day. (Price, Volume)
-
-	for coin in top_100:
-		daily_data = cmk.get_today(coin)
-		url = "api/" + coin + "/cmk/" + datetime.datetime.today().strftime("%D")
-		requests.post(url, daily_data)
     
 ### References
 1. [Deep Reinforcement Learning for the Financial Portfolio Management Problem](https://arxiv.org/pdf/1706.10059.pdf) [implementation](https://github.com/ZhengyaoJiang/PGPortfolio) [replication](https://github.com/wassname/rl-portfolio-management)

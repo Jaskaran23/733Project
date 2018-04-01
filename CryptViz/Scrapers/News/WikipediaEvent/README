@@ -1,0 +1,13 @@
+Usage:
+
+Scrapy: https://doc.scrapy.org/en/latest/intro/overview.html
+pausing and resuming crawl: https://doc.scrapy.org/en/latest/topics/jobs.html
+
+
+scrapy crawl WikiEvent -o [any location/][any file name, Ex:WikiEvent].jl
+
+jl stand for JSON Lines format http://jsonlines.org/
+
+for other format:
+    json format use filename.json 
+    csv  format use filename.csv -t csv

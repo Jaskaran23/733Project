@@ -1,0 +1,29 @@
+Google Trend:
+https://trends.google.com/trends/
+Example: https://trends.google.com/trends/explore?q=%2Fm%2F0vpj4_b,Bonds,US%20Stock
+
+Pytrend:
+https://github.com/GeneralMills/pytrends
+
+Data Example:
+
+Output format Pandas dataframe: 
+Value 1-100: 
+ - 100 is the peak popularity for the term. 
+ - 50 means that the term is half as popular. 
+ - 0 means there was not enough data for this term.
+ 
+Interest Over Time:
+            Blockchain  Cryptocurrency isPartial
+date
+2017-04-02           8               2     False
+2017-04-09           8               2     False
+2017-04-16           8               2     False
+
+Interest by region:
+                      Blockchain  Cryptocurrency
+geoName
+Slovenia                      51             100
+Australia                     28              77
+Singapore                     61              74
+Netherlands                   44              61

@@ -95,9 +95,21 @@ class CoinMarketcap():
         # convert to int
         bitcoin_market_info['Volume'] = bitcoin_market_info['Volume'].astype('int64')
 
+        # Generate Volatility Column
+        bitcoin_market_info['Volatility'] = (bitcoin_market_info['High']- bitcoin_market_info['Low']) / bitcoin_market_info['Open']
+
+        # Generate day of year and month Column
+        bitcoin_market_info['doy'] = pd.to_datetime(bitcoin_market_info['Date']).apply(lambda x: x.dayofyear)
+
+        # Generate Volatility Column
+        bitcoin_market_info['month'] = pd.to_datetime(bitcoin_market_info['Date']).apply(lambda x: x.month)
+
+        # Generate Daily Price Change Column
+        bitcoin_market_info['day_diff'] = bitcoin_market_info['Close']  / bitcoin_market_info['Open']
+
         return bitcoin_market_info
 
-    def plot_price(self, market_info, image_url=None):
+    def plot_price(self, market_info, split_date=None, image_url=None, plot_volatility=False):
         image = None
         if image_url:
             image = urllib.request.urlopen(image_url)
@@ -109,14 +121,20 @@ class CoinMarketcap():
         fig, (ax1, ax2) = plt.subplots(2,1, gridspec_kw = {'height_ratios':[3, 1]}, figsize=(12,6))
         ax1.set_ylabel('Closing Price (USD)',fontsize=12)
         ax2.set_ylabel('Volume (Billion USD)',fontsize=12)
-        #  ax2.set_yticks([int('%d000000000'%i) for i in range(10)])
         ax2.set_yticklabels(range(10))
         ax1.set_xticks([datetime.date(i,j,1) for i in range(2013,2019) for j in [1,7]])
         ax1.set_xticklabels('')
         ax2.set_xticks([datetime.date(i,j,1) for i in range(2013,2019) for j in [1,7]])
         ax2.set_xticklabels([datetime.date(i,j,1).strftime('%b %Y')  for i in range(2013,2019) for j in [1,7]])
-        ax1.plot(market_info['Date'].astype(datetime.datetime),market_info['Open'])
+        ax1.plot(market_info[market_info['Date'] < split_date]['Date'].astype(datetime.datetime),market_info[market_info['Date'] < split_date]['Open'], color='#8FBAC8')
+        ax1.plot(market_info[market_info['Date'] >= split_date]['Date'].astype(datetime.datetime),market_info[market_info['Date'] >= split_date]['Open'], color='#B08FC7')
         ax2.bar(market_info['Date'].astype(datetime.datetime).values, market_info['Volume'].values)
+
+        #Plot Volatility
+        if plot_volatility:
+            ax3 = ax1.twinx()
+            ax3.plot(market_info['Date'].astype(datetime.datetime),market_info['Volatility'], color='black', linewidth=0.5, alpha=0.5)
+
         fig.tight_layout()
         if image:
             fig.figimage(image, 100, 30, zorder=3,alpha=.5)

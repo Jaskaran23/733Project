@@ -56,6 +56,10 @@ class Evaluator:
         train_y = np.stack([np.stack(x) for x in np.stack(train[:,1])])
         return (train_X, train_y)
 
+class CNN2D:
+    """I am a 2D CNN coin evaluator"""
+    def __init__(self, forecast='binary'):
+
 class CNN(Evaluator):
     """I am a CNN coin evaluator"""
     def __init__(self, pred_type='binary'):
@@ -75,10 +79,10 @@ class CNN(Evaluator):
 
         model = Sequential()
         model.add(Conv2D(filters=4, kernel_size=(1, 3), input_shape=[100,60,8]))
-        model.add(Activation('relu'))
+        #  model.add(Activation('relu'))
         model.add(MaxPooling2D(pool_size=(1,2)))
         model.add(Conv2D(20, (1,29)))
-        model.add(Activation('selu'))
+        #  model.add(Activation('selu'))
         model.add(Conv2D(1, (1,1)))
         model.add(Flatten())
         model.add(Activation(self.activation))

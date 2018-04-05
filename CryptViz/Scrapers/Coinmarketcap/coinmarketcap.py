@@ -356,7 +356,7 @@ class Coin(Scraper):
         today = self.today()
         return int(today['Market Cap'][0])
 
-    def read_history(self, start=None,end=None, cache_days=7):
+    def read_history(self, start=20130428,end=20180405, cache_days=7):
         filename = os.path.join(self.dir,'{}-history.csv'.format(self.name))
         try:
             # Check for freshness. If more than a day old, re-download

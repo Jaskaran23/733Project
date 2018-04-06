@@ -14,6 +14,6 @@ class WikipediaEventItem(scrapy.Item):
     category = scrapy.Field()
     sub_category = scrapy.Field()
     news_header = scrapy.Field()
-    # news_sub_header = scrapy.Field()
+    source_names = scrapy.Field()
     # source -> [(source_name, source_url), (...), ...]
-    source = scrapy.Field()
+    source_list = scrapy.Field()

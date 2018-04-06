@@ -39,14 +39,17 @@ class WikieventSpider(scrapy.Spider):
                     item["news_header"] =  normalize("NFKD", "".join(texts) if len(texts) > 0 else "").encode("ascii", errors="replace").decode("utf-8")
                     #normalize("NFKD", "".join(texts) if len(texts) > 0 else "").encode("ascii", errors="replace")
                     references = description.xpath('(a[contains(@class, "external")])')
+                    source_names = []
                     source_list = []
                     for ref in references:
                         url = ref.xpath('@href').extract_first()
-                        source = ref.xpath('text()').extract_first()
+                        source = ref.xpath('text()|*/text()').extract_first()
                         if source is not None:
                             source = source.strip("()")
                         source_list.append((source, url))
-                    item['source'] = source_list
+                        source_names.append(source)
+                    item['source_names'] = (','.join(source_names)) if source_names is not None and len(source_names) > 0 else ""
+                    item['source_list'] = source_list
                     yield item
     
         next_page = response.xpath('//span[@class="noprint"]/a[text()="▶"]/@href').extract_first()

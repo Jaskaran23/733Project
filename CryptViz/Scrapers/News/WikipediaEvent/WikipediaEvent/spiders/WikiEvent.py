@@ -9,7 +9,8 @@ from datetime import datetime
 class WikieventSpider(scrapy.Spider):
     name = 'WikiEvent'
     allowed_domains = ['en.wikipedia.org']
-    start_urls      = ["https://en.wikipedia.org/wiki/Portal:Current_events/January_1995"]
+    start_urls      = ["https://en.wikipedia.org/wiki/Portal:Current_events/October_2017"]
+    #["https://en.wikipedia.org/wiki/Portal:Current_events/January_1995"]
     #["https://en.wikipedia.org/wiki/Portal:Current_events/January_2011"]
  
     def parse(self, response):
@@ -53,5 +54,6 @@ class WikieventSpider(scrapy.Spider):
                     yield item
     
         next_page = response.xpath('//span[@class="noprint"]/a[text()="▶"]/@href').extract_first()
+        print(next_page)
         if next_page is not None:
             yield response.follow(next_page, self.parse)

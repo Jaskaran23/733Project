@@ -1,0 +1,21 @@
+Reddit API:
+https://www.reddit.com/dev/api
+
+PRAW (Reddit API Wrapper for python):
+http://praw.readthedocs.io/
+
+Introduction Video:
+https://www.youtube.com/watch?v=NRgfgtzIhBQ
+
+Some pre-made dataset: 
+    1. https://github.com/dewarim/reddit-data-tools
+        - Related to 2.
+        - Example code to analysis data .../blob/master/src/main/python/scoreCommentsJson.py
+    2. https://www.reddit.com/r/datasets/comments/3bxlg7/i_have_every_publicly_available_reddit_comment/
+    3. http://academictorrents.com/details/85a5bd50e4c365f8df70240ffd4ecc7dec59912b
+    
+Google BigQuery reddit comments data:
+https://bigquery.cloud.google.com/table/fh-bigquery:bigdataspain.aggr_transaction_clean?pli=1
+
+What can we do with comments?
+Topic Modeling: https://www.kdnuggets.com/2016/07/text-mining-101-topic-modeling.html
